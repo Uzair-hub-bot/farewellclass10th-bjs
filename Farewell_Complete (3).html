@@ -1,0 +1,1983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Farewell – Class of 2025</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--gold:#c9a84c;--deep:#1a1a2e;--mid:#16213e;--accent:#0f3460;--light:#f5f0e8;--white:#ffffff;--soft:#faf8f4}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--soft);color:#2d2d2d;overflow-x:hidden}
+
+/* ── NAV ── */
+nav{position:sticky;top:0;z-index:999;background:rgba(26,26,46,0.97);backdrop-filter:blur(10px);padding:14px 30px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 2px 20px rgba(0,0,0,.3)}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.nav-logo .logo-icon{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#e8c76d);display:flex;align-items:center;justify-content:center;font-size:1.3rem}
+.nav-logo span{color:#fff;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700}
+.nav-links{display:flex;gap:24px;list-style:none}
+.nav-links a{color:rgba(255,255,255,.7);text-decoration:none;font-size:.85rem;letter-spacing:1px;text-transform:uppercase;transition:.2s}
+.nav-links a:hover{color:var(--gold)}
+
+/* ── HERO / LANDING ── */
+.landing{min-height:100vh;background:linear-gradient(160deg,var(--deep) 0%,var(--accent) 60%,#1a3a6e 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 20px;position:relative;overflow:hidden}
+.landing::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Cpath d='M0 0h40v40H0zm40 40h40v40H40z'/%3E%3C/g%3E%3C/svg%3E")}
+.confetti{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none}
+.school-logo-wrap{position:relative;z-index:2;margin-bottom:24px}
+.school-logo{width:130px;height:130px;border-radius:50%;border:4px solid var(--gold);background:linear-gradient(135deg,rgba(255,255,255,.15),rgba(255,255,255,.05));display:flex;align-items:center;justify-content:center;font-size:4rem;margin:0 auto 16px;box-shadow:0 0 60px rgba(201,168,76,.3),0 8px 40px rgba(0,0,0,.4)}
+.school-name{font-family:'Playfair Display',serif;font-size:clamp(1rem,2.5vw,1.4rem);color:var(--gold);letter-spacing:4px;text-transform:uppercase;margin-bottom:4px;position:relative;z-index:2}
+.school-tagline{color:rgba(255,255,255,.55);font-size:.8rem;letter-spacing:3px;text-transform:uppercase;margin-bottom:40px;position:relative;z-index:2}
+.landing h1{position:relative;z-index:2;font-family:'Playfair Display',serif;font-size:clamp(2.8rem,8vw,6rem);color:#fff;line-height:1.1;margin-bottom:10px}
+.landing h1 em{color:var(--gold);font-style:normal}
+.landing .class-badge{position:relative;z-index:2;display:inline-block;border:2px solid var(--gold);color:var(--gold);padding:10px 32px;border-radius:50px;font-size:.85rem;letter-spacing:4px;text-transform:uppercase;margin:20px 0 36px}
+.landing-desc{position:relative;z-index:2;color:rgba(255,255,255,.8);font-size:1.05rem;max-width:600px;line-height:1.8;margin-bottom:40px}
+.scroll-arrow{position:relative;z-index:2;margin-top:50px;color:rgba(255,255,255,.4);animation:bounce 2s infinite;cursor:pointer}
+.scroll-arrow svg{width:32px;height:32px}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+
+/* ── SCHOOL PICS GALLERY ── */
+.school-pics{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:10px;position:relative;z-index:2}
+.school-pic-card{width:160px;border-radius:14px;border:2px solid rgba(201,168,76,.4);background:rgba(255,255,255,.06);cursor:pointer;transition:.3s;overflow:hidden;display:flex;flex-direction:column}
+.school-pic-card:hover{border-color:var(--gold);transform:translateY(-4px);background:rgba(255,255,255,.1)}
+.spc-preview{width:100%;height:100px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;background:rgba(0,0,0,.2)}
+.spc-emoji{font-size:2.4rem}
+.spc-preview .spc-cover{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.85}
+.spc-stack{position:absolute;bottom:5px;right:5px;display:flex;gap:3px}
+.spc-stack-thumb{width:26px;height:26px;border-radius:4px;border:1px solid rgba(255,255,255,.4);object-fit:cover}
+.spc-footer{padding:7px 10px 2px;display:flex;justify-content:space-between;align-items:center}
+.spc-label{color:#fff;font-size:.72rem;letter-spacing:.5px}
+.spc-count{color:var(--gold);font-size:.65rem;font-weight:600}
+.spc-add{margin:6px 10px 8px;background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.4);color:var(--gold);border-radius:50px;font-size:.65rem;padding:4px 10px;cursor:pointer;letter-spacing:.5px;transition:.2s;text-transform:uppercase}
+.spc-add:hover{background:rgba(201,168,76,.35)}
+
+/* ── GALLERY MODAL ── */
+#galleryModal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:9999;flex-direction:column;align-items:center;justify-content:center}
+#thumbStrip{display:flex;gap:8px;margin-top:16px;overflow-x:auto;max-width:80vw;padding:8px 4px;scrollbar-width:thin}
+#thumbStrip::-webkit-scrollbar{height:4px}
+#thumbStrip::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px}
+.thumb-img{width:64px;height:48px;object-fit:cover;border-radius:6px;border:2px solid transparent;cursor:pointer;flex-shrink:0;transition:.2s}
+.thumb-img.active{border-color:var(--gold)}
+.thumb-img:hover{border-color:rgba(201,168,76,.6)}
+
+/* ── SECTION COMMON ── */
+.section-head{text-align:center;margin-bottom:50px}
+.section-lbl{font-size:.72rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:8px}
+.section-ttl{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);color:var(--deep);line-height:1.2}
+.divider{width:60px;height:3px;background:linear-gradient(90deg,var(--gold),transparent);margin:16px auto 0;border-radius:2px}
+
+/* ── STUDENTS ── */
+.students-section{padding:80px 20px;background:var(--soft)}
+.students-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:28px;max-width:1100px;margin:0 auto}
+.student-card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.08);transition:.3s;border:1px solid rgba(201,168,76,.15)}
+.student-card:hover{transform:translateY(-6px);box-shadow:0 12px 40px rgba(0,0,0,.15);border-color:var(--gold)}
+.student-card-top{background:linear-gradient(135deg,var(--deep),var(--accent));padding:28px 20px;text-align:center;position:relative}
+.student-avatar{width:100px;height:100px;border-radius:50%;border:4px solid var(--gold);margin:0 auto 14px;background:linear-gradient(135deg,rgba(255,255,255,.2),rgba(255,255,255,.05));display:flex;align-items:center;justify-content:center;font-size:2.8rem;overflow:hidden;cursor:pointer;position:relative}
+.student-avatar .av-emoji{position:relative;z-index:1}
+.student-avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:50%}
+.student-avatar .av-overlay{position:absolute;inset:0;background:rgba(0,0,0,.5);border-radius:50%;display:flex;align-items:center;justify-content:center;opacity:0;transition:.25s;font-size:.65rem;color:#fff;text-align:center;padding:6px;z-index:2}
+.student-avatar:hover .av-overlay{opacity:1}
+.student-name{color:#fff;font-family:'Playfair Display',serif;font-size:1.25rem;margin-bottom:4px}
+.student-roll{color:var(--gold);font-size:.78rem;letter-spacing:2px;text-transform:uppercase}
+.student-body{padding:22px}
+.info-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #f0ebe0;font-size:.85rem}
+.info-row:last-child{border-bottom:none}
+.info-label{color:#999;font-weight:500;font-size:.78rem;text-transform:uppercase;letter-spacing:1px}
+.info-val{color:var(--deep);font-weight:600;font-size:.88rem;text-align:right;max-width:60%}
+.marks-bar{margin-top:14px;padding-top:14px;border-top:1px solid #f0ebe0}
+.marks-label{font-size:.75rem;text-transform:uppercase;letter-spacing:1px;color:#999;margin-bottom:8px}
+.bar-wrap{background:#f0ebe0;border-radius:50px;height:8px;overflow:hidden}
+.bar-fill{height:100%;border-radius:50px;background:linear-gradient(90deg,var(--gold),#e8c76d)}
+.fav-teacher{margin-top:12px;background:linear-gradient(135deg,var(--deep),var(--accent));border-radius:10px;padding:10px 14px;display:flex;align-items:center;gap:10px}
+.fav-teacher span{font-size:1.2rem}
+.fav-teacher div p:first-child{font-size:.7rem;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:1px}
+.fav-teacher div p:last-child{font-size:.88rem;color:var(--gold);font-weight:600}
+
+/* ── TEACHERS ── */
+.teachers-section{padding:80px 20px;background:linear-gradient(160deg,var(--deep),var(--accent))}
+.teachers-section .section-ttl{color:#fff}
+.teachers-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:32px;max-width:1100px;margin:0 auto}
+.teacher-card{background:rgba(255,255,255,.06);border:1px solid rgba(201,168,76,.25);border-radius:22px;overflow:hidden;transition:.3s}
+.teacher-card:hover{background:rgba(255,255,255,.1);border-color:var(--gold);transform:translateY(-6px)}
+.teacher-pics{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;height:180px}
+.teacher-pic{background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;font-size:2rem;overflow:hidden;cursor:pointer;transition:.2s;position:relative}
+.teacher-pic:first-child{grid-row:span 2;font-size:3rem}
+.teacher-pic:hover{background:rgba(201,168,76,.15)}
+.teacher-pic img{width:100%;height:100%;object-fit:cover}
+.teacher-pic .tp-overlay{position:absolute;inset:0;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;opacity:0;transition:.25s;cursor:pointer;font-size:.7rem;color:#fff;letter-spacing:.5px;flex-direction:column;gap:4px}
+.teacher-pic:hover .tp-overlay{opacity:1}
+.teacher-pic input[type=file]{display:none}
+.teacher-body{padding:24px}
+.teacher-name{font-family:'Playfair Display',serif;font-size:1.3rem;color:#fff;margin-bottom:4px}
+.teacher-subject{color:var(--gold);font-size:.8rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px}
+.teacher-info-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px}
+.t-info{background:rgba(255,255,255,.05);border-radius:10px;padding:10px 12px}
+.t-info-lbl{font-size:.65rem;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.45);margin-bottom:3px}
+.t-info-val{font-size:.85rem;color:#fff;font-weight:500}
+.teacher-quote{background:rgba(201,168,76,.1);border-left:3px solid var(--gold);border-radius:0 10px 10px 0;padding:14px 16px;font-size:.9rem;line-height:1.7;color:rgba(255,255,255,.85);font-style:italic}
+.teacher-degree{display:inline-block;background:var(--gold);color:var(--deep);font-size:.7rem;font-weight:700;letter-spacing:1px;padding:4px 12px;border-radius:50px;margin-bottom:14px;text-transform:uppercase}
+
+/* ── VIDEOS ── */
+.videos-section{padding:80px 20px;background:var(--soft)}
+.videos-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:22px;max-width:1100px;margin:0 auto}
+.video-card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.08);border:1px solid rgba(201,168,76,.15);transition:.3s;cursor:pointer}
+.video-card:hover{transform:translateY(-5px);box-shadow:0 12px 36px rgba(0,0,0,.14);border-color:var(--gold)}
+.video-thumb{height:170px;background:linear-gradient(135deg,var(--mid),var(--accent));display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.play-btn{width:60px;height:60px;border-radius:50%;background:rgba(201,168,76,.9);display:flex;align-items:center;justify-content:center;font-size:1.5rem;transition:.2s}
+.video-card:hover .play-btn{transform:scale(1.12);background:var(--gold)}
+.video-label{padding:16px 18px}
+.video-title{font-family:'Playfair Display',serif;font-size:1rem;color:var(--deep);margin-bottom:4px}
+.video-sub{font-size:.8rem;color:#999}
+.add-media{border:2px dashed #d0c8b8;background:transparent;color:#bbb;cursor:pointer}
+.add-media:hover{border-color:var(--gold);color:var(--gold)}
+.add-media .video-thumb{background:rgba(201,168,76,.05)}
+
+/* ── FOOTER ── */
+footer{background:var(--deep);color:rgba(255,255,255,.45);text-align:center;padding:50px 20px 30px;font-size:.85rem;line-height:1.8}
+footer .footer-logo{font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--gold);margin-bottom:10px}
+footer span{color:var(--gold)}
+.footer-links{display:flex;gap:24px;justify-content:center;margin:18px 0;list-style:none;flex-wrap:wrap}
+.footer-links a{color:rgba(255,255,255,.4);text-decoration:none;font-size:.8rem;letter-spacing:1px;text-transform:uppercase;transition:.2s}
+.footer-links a:hover{color:var(--gold)}
+
+/* ── ADMIN SYSTEM ── */
+#adminBtn{position:fixed;bottom:28px;right:28px;z-index:9000;background:linear-gradient(135deg,var(--deep),var(--accent));border:2px solid var(--gold);color:var(--gold);padding:12px 20px;border-radius:50px;font-size:.8rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,.4);transition:.3s;display:flex;align-items:center;gap:8px}
+#adminBtn:hover{background:var(--gold);color:var(--deep);transform:translateY(-2px)}
+#adminBtn.active{background:linear-gradient(135deg,#8b0000,#c0392b);border-color:#ff6b6b;color:#fff}
+
+/* Password Modal */
+#pwModal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:99000;align-items:center;justify-content:center;backdrop-filter:blur(8px)}
+#pwModal.show{display:flex}
+.pw-box{background:linear-gradient(135deg,var(--deep),var(--accent));border:2px solid var(--gold);border-radius:20px;padding:40px;max-width:380px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+.pw-box h3{font-family:'Playfair Display',serif;color:var(--gold);font-size:1.4rem;margin-bottom:8px}
+.pw-box p{color:rgba(255,255,255,.6);font-size:.85rem;margin-bottom:24px}
+.pw-box input{width:100%;padding:14px 18px;border-radius:10px;border:2px solid rgba(201,168,76,.3);background:rgba(255,255,255,.07);color:#fff;font-size:1rem;letter-spacing:4px;text-align:center;outline:none;transition:.2s;margin-bottom:6px}
+.pw-box input:focus{border-color:var(--gold)}
+#pwError{color:#ff6b6b;font-size:.8rem;min-height:20px;margin-bottom:14px}
+.pw-btns{display:flex;gap:12px}
+.pw-btn{flex:1;padding:12px;border-radius:10px;border:none;font-weight:700;font-size:.85rem;letter-spacing:1px;cursor:pointer;transition:.2s;text-transform:uppercase}
+.pw-btn.confirm{background:var(--gold);color:var(--deep)}
+.pw-btn.confirm:hover{background:#e8c76d}
+.pw-btn.cancel{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.2)}
+.pw-btn.cancel:hover{background:rgba(255,255,255,.2)}
+
+/* Edit Mode Bar */
+#editBar{display:none;position:fixed;top:0;left:0;right:0;z-index:9999;background:linear-gradient(90deg,#8b0000,#c0392b);padding:12px 20px;align-items:center;justify-content:space-between;box-shadow:0 4px 20px rgba(0,0,0,.4)}
+#editBar.show{display:flex}
+#editBar .edit-label{color:#fff;font-weight:700;font-size:.85rem;letter-spacing:2px;text-transform:uppercase;display:flex;align-items:center;gap:8px}
+#editBar .edit-label span{background:rgba(255,255,255,.2);padding:4px 10px;border-radius:50px;font-size:.7rem}
+.edit-bar-btns{display:flex;gap:10px}
+.eb-btn{padding:8px 18px;border-radius:50px;border:none;font-weight:700;font-size:.78rem;letter-spacing:1px;cursor:pointer;transition:.2s;text-transform:uppercase}
+.eb-btn.save{background:#fff;color:#8b0000}
+.eb-btn.save:hover{background:#f0f0f0;transform:scale(1.03)}
+.eb-btn.exit{background:rgba(255,255,255,.2);color:#fff;border:1px solid rgba(255,255,255,.4)}
+.eb-btn.exit:hover{background:rgba(255,255,255,.3)}
+
+/* Edit Mode - Editable Fields */
+body.edit-mode [data-editable]{outline:2px dashed rgba(201,168,76,.6);border-radius:4px;cursor:text;padding:2px 4px;transition:.2s;min-width:40px;display:inline-block}
+body.edit-mode [data-editable]:hover{outline-color:var(--gold);background:rgba(201,168,76,.1)}
+body.edit-mode [data-editable]:focus{outline:2px solid var(--gold);background:rgba(201,168,76,.15)}
+
+/* Delete Buttons */
+.del-btn{display:none;position:absolute;top:10px;right:10px;z-index:100;background:#c0392b;color:#fff;border:none;border-radius:50%;width:30px;height:30px;font-size:1rem;cursor:pointer;align-items:center;justify-content:center;line-height:1;font-weight:700;transition:.2s;box-shadow:0 2px 10px rgba(0,0,0,.3)}
+.del-btn:hover{background:#8b0000;transform:scale(1.1)}
+body.edit-mode .del-btn{display:flex}
+body.edit-mode .student-card{position:relative}
+body.edit-mode .teacher-card{position:relative}
+body.edit-mode .video-card{position:relative}
+
+/* Supabase Delete Confirm Modal */
+#delModal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:99999;align-items:center;justify-content:center}
+#delModal.show{display:flex}
+.del-box{background:linear-gradient(135deg,var(--deep),#3d0000);border:2px solid #c0392b;border-radius:20px;padding:36px;max-width:380px;width:90%;text-align:center}
+.del-box h3{font-family:'Playfair Display',serif;color:#ff6b6b;font-size:1.3rem;margin-bottom:10px}
+.del-box p{color:rgba(255,255,255,.7);font-size:.88rem;margin-bottom:8px;line-height:1.6}
+.del-box .del-name{color:#fff;font-weight:700;font-size:1rem;margin-bottom:20px}
+.del-box small{color:rgba(255,255,255,.4);font-size:.75rem;display:block;margin-bottom:20px}
+.del-btns{display:flex;gap:12px}
+.del-confirm-btn{flex:1;padding:12px;border-radius:10px;border:none;font-weight:700;font-size:.85rem;letter-spacing:1px;cursor:pointer;transition:.2s;text-transform:uppercase}
+.del-confirm-btn.yes{background:#c0392b;color:#fff}
+.del-confirm-btn.yes:hover{background:#8b0000}
+.del-confirm-btn.no{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.2)}
+.del-confirm-btn.no:hover{background:rgba(255,255,255,.2)}
+#delStatus{color:#ff6b6b;font-size:.8rem;min-height:18px;margin-bottom:10px}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#top">
+    <img src="data:image/png;base64,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" style="width:40px;height:40px;object-fit:contain;">
+    <span>British International School System</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#students">Students</a></li>
+    <li><a href="#teachers">Teachers</a></li>
+    <li><a href="#videos">Memories</a></li>
+  </ul>
+</nav>
+
+<!-- LANDING / HERO -->
+<div class="landing" id="top">
+  <canvas class="confetti" id="confettiCanvas"></canvas>
+
+  <div class="school-logo-wrap">
+    <div class="school-logo" style="background:none;border:none;box-shadow:none;"><img src="data:image/png;base64,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" style="width:130px;height:130px;object-fit:contain;"></div>
+    <p class="school-name">British International School System</p>
+    <p class="school-tagline">Est. 2020 · Burewala, Pakistan</p>
+  </div>
+
+  <h1>Farewell,<br/><em>Class of 2025</em> 🎓</h1>
+  <div class="class-badge">Batch 2020 – 2025</div>
+  <p class="landing-desc">From the very first bell to the very last — every moment, every lesson, every friendship has shaped who you are today. This page is a tribute to an extraordinary class and the teachers who guided them.</p>
+
+  <div class="school-pics">
+    <div class="school-pic-card" onclick="openGallery(0)">
+      <input type="file" accept="image/*" multiple style="display:none" onchange="addPhotos(this,0)">
+      <div class="spc-preview" id="preview-0">
+        <span class="spc-emoji">🏛️</span>
+      </div>
+      <div class="spc-footer">
+        <span class="spc-label">School Building</span>
+        <span class="spc-count" id="count-0">0 photos</span>
+      </div>
+      <button class="spc-add" onclick="event.stopPropagation();document.querySelectorAll('.school-pic-card')[0].querySelector('input').click()">+ Add Photos</button>
+    </div>
+
+    <div class="school-pic-card" onclick="openGallery(1)">
+      <input type="file" accept="image/*" multiple style="display:none" onchange="addPhotos(this,1)">
+      <div class="spc-preview" id="preview-1">
+        <span class="spc-emoji">📚</span>
+      </div>
+      <div class="spc-footer">
+        <span class="spc-label">Library</span>
+        <span class="spc-count" id="count-1">0 photos</span>
+      </div>
+      <button class="spc-add" onclick="event.stopPropagation();document.querySelectorAll('.school-pic-card')[1].querySelector('input').click()">+ Add Photos</button>
+    </div>
+
+    <div class="school-pic-card" onclick="openGallery(2)">
+      <input type="file" accept="image/*" multiple style="display:none" onchange="addPhotos(this,2)">
+      <div class="spc-preview" id="preview-2">
+        <span class="spc-emoji">🏟️</span>
+      </div>
+      <div class="spc-footer">
+        <span class="spc-label">Sports Ground</span>
+        <span class="spc-count" id="count-2">0 photos</span>
+      </div>
+      <button class="spc-add" onclick="event.stopPropagation();document.querySelectorAll('.school-pic-card')[2].querySelector('input').click()">+ Add Photos</button>
+    </div>
+
+    <div class="school-pic-card" onclick="openGallery(3)">
+      <input type="file" accept="image/*" multiple style="display:none" onchange="addPhotos(this,3)">
+      <div class="spc-preview" id="preview-3">
+        <span class="spc-emoji">🎭</span>
+      </div>
+      <div class="spc-footer">
+        <span class="spc-label">Auditorium</span>
+        <span class="spc-count" id="count-3">0 photos</span>
+      </div>
+      <button class="spc-add" onclick="event.stopPropagation();document.querySelectorAll('.school-pic-card')[3].querySelector('input').click()">+ Add Photos</button>
+    </div>
+
+    <div class="school-pic-card" onclick="openGallery(4)">
+      <input type="file" accept="image/*" multiple style="display:none" onchange="addPhotos(this,4)">
+      <div class="spc-preview" id="preview-4">
+        <span class="spc-emoji">🔬</span>
+      </div>
+      <div class="spc-footer">
+        <span class="spc-label">Science Lab</span>
+        <span class="spc-count" id="count-4">0 photos</span>
+      </div>
+      <button class="spc-add" onclick="event.stopPropagation();document.querySelectorAll('.school-pic-card')[4].querySelector('input').click()">+ Add Photos</button>
+    </div>
+  </div>
+
+  <div class="scroll-arrow" onclick="document.getElementById('students').scrollIntoView({behavior:'smooth'})">
+    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+  </div>
+</div>
+
+<!-- GALLERY MODAL -->
+<div id="galleryModal">
+  <button onclick="closeGallery()" style="position:absolute;top:20px;right:28px;background:none;border:none;color:#fff;font-size:2rem;cursor:pointer;z-index:10000">✕</button>
+  <p id="galleryTitle" style="color:var(--gold);font-family:'Playfair Display',serif;font-size:1.3rem;margin-bottom:18px;letter-spacing:2px"></p>
+
+  <div style="position:relative;display:flex;align-items:center;gap:16px">
+    <button onclick="shiftSlide(-1)" style="background:rgba(255,255,255,.1);border:none;color:#fff;font-size:2rem;width:50px;height:50px;border-radius:50%;cursor:pointer;transition:.2s" onmouseover="this.style.background='rgba(201,168,76,.5)'" onmouseout="this.style.background='rgba(255,255,255,.1)'">‹</button>
+    <img id="galleryMain" src="" style="max-width:70vw;max-height:60vh;border-radius:14px;border:3px solid var(--gold);object-fit:contain;box-shadow:0 8px 60px rgba(0,0,0,.6)">
+    <button onclick="shiftSlide(1)" style="background:rgba(255,255,255,.1);border:none;color:#fff;font-size:2rem;width:50px;height:50px;border-radius:50%;cursor:pointer;transition:.2s" onmouseover="this.style.background='rgba(201,168,76,.5)'" onmouseout="this.style.background='rgba(255,255,255,.1)'">›</button>
+  </div>
+
+  <p id="slideCounter" style="color:rgba(255,255,255,.5);font-size:.85rem;margin-top:12px"></p>
+  <div id="thumbStrip"></div>
+  <button id="modalAddBtn" onclick="triggerModalAdd()" style="margin-top:18px;background:rgba(201,168,76,.15);border:1px solid var(--gold);color:var(--gold);padding:8px 24px;border-radius:50px;font-size:.82rem;letter-spacing:1px;cursor:pointer;text-transform:uppercase;transition:.2s" onmouseover="this.style.background='rgba(201,168,76,.3)'" onmouseout="this.style.background='rgba(201,168,76,.15)'">📷 Add More Photos</button>
+</div>
+
+<!-- STUDENTS SECTION -->
+<section class="students-section" id="students">
+  <div class="section-head">
+    <p class="section-lbl">Class of 2025</p>
+    <h2 class="section-ttl">Our Graduating Students</h2>
+    <div class="divider"></div>
+  </div>
+  <div class="students-grid">
+
+    <!-- STUDENT 1 -->
+    <div class="student-card" data-type="student" data-id="student-1">
+      <button class="del-btn" onclick="confirmDelete(this)" title="Delete">✕</button>
+      <div class="student-card-top">
+        <div class="student-avatar" onclick="triggerAvatarUpload(this)">
+          <input type="file" accept="image/*" style="display:none" onchange="handleAvatarUpload(this)">
+          <span class="av-emoji">👦</span>
+          <div class="av-overlay">📷 Upload</div>
+        </div>
+        <p class="student-name" data-editable contenteditable="false">M Ch Usman</p>
+        <p class="student-roll" data-editable contenteditable="false">Roll No. 001</p>
+      </div>
+      <div class="student-body">
+        <div class="info-row"><span class="info-label">Age</span><span class="info-val" data-editable contenteditable="false">16 years</span></div>
+        <div class="info-row"><span class="info-label">Father's Name</span><span class="info-val" data-editable contenteditable="false">Tahir Gujjar</span></div>
+        <div class="info-row"><span class="info-label">Address</span><span class="info-val" data-editable contenteditable="false">1021 New Model Town</span></div>
+        <div class="info-row"><span class="info-label">Phone</span><span class="info-val" data-editable contenteditable="false">0349 6986186</span></div>
+        <div class="info-row"><span class="info-label">Weight</span><span class="info-val" data-editable contenteditable="false">53 kg</span></div>
+        <div class="info-row"><span class="info-label">Hobby</span><span class="info-val" data-editable contenteditable="false">Playing Cricket</span></div>
+        <div class="info-row"><span class="info-label">Hobby</span><span class="info-val" data-editable contenteditable="false">[Add Hobby]</span></div>
+        <div class="info-row"><span class="info-label">Career Goal</span><span class="info-val" data-editable contenteditable="false">Information Technology</span></div>
+        <div class="marks-bar">
+          <p class="marks-label">Previous Class Marks</p>
+          <p style="font-size:.88rem;font-weight:700;color:var(--deep);margin-bottom:6px">368/555 — 66%</p>
+          <div class="bar-wrap"><div class="bar-fill" style="width:66%"></div></div>
+        </div>
+        <div class="fav-teacher"><span>⭐</span><div><p>Favourite Teacher</p><p data-editable contenteditable="false">Sir Ibrahim</p></div></div>
+      </div>
+    </div>
+
+    <!-- STUDENT 2 -->
+    <div class="student-card" data-type="student" data-id="student-2">
+      <button class="del-btn" onclick="confirmDelete(this)" title="Delete">✕</button>
+      <div class="student-card-top">
+        <div class="student-avatar" onclick="triggerAvatarUpload(this)">
+          <input type="file" accept="image/*" style="display:none" onchange="handleAvatarUpload(this)">
+          <span class="av-emoji">👦</span>
+          <div class="av-overlay">📷 Upload</div>
+        </div>
+        <p class="student-name" data-editable contenteditable="false">Hanan Shahid</p>
+        <p class="student-roll" data-editable contenteditable="false">Roll No. 002</p>
+      </div>
+      <div class="student-body">
+        <div class="info-row"><span class="info-label">Age</span><span class="info-val" data-editable contenteditable="false">16 years</span></div>
+        <div class="info-row"><span class="info-label">Father's Name</span><span class="info-val" data-editable contenteditable="false">Shahid Waseem</span></div>
+        <div class="info-row"><span class="info-label">Address</span><span class="info-val" data-editable contenteditable="false">Dugyal Works</span></div>
+        <div class="info-row"><span class="info-label">Phone</span><span class="info-val" data-editable contenteditable="false">0300 0321 5882100</span></div>
+        <div class="info-row"><span class="info-label">Weight</span><span class="info-val" data-editable contenteditable="false">-</span></div>
+        <div class="info-row"><span class="info-label">Hobby</span><span class="info-val" data-editable contenteditable="false">Football, All Rounder</span></div>
+        <div class="info-row"><span class="info-label">Hobby</span><span class="info-val" data-editable contenteditable="false">[Add Hobby]</span></div>
+        <div class="info-row"><span class="info-label">Career Goal</span><span class="info-val" data-editable contenteditable="false">Sports Man</span></div>
+        <div class="marks-bar">
+          <p class="marks-label">Previous Class Marks</p>
+          <p style="font-size:.88rem;font-weight:700;color:var(--deep);margin-bottom:6px">321/555 — 58%</p>
+          <div class="bar-wrap"><div class="bar-fill" style="width:58%"></div></div>
+        </div>
+        <div class="fav-teacher"><span>⭐</span><div><p>Favourite Teacher</p><p data-editable contenteditable="false">Sir Sajjad Iqbal</p></div></div>
+      </div>
+    </div>
+
+    <!-- STUDENT 3 -->
+    <div class="student-card" data-type="student" data-id="student-3">
+      <button class="del-btn" onclick="confirmDelete(this)" title="Delete">✕</button>
+      <div class="student-card-top">
+        <div class="student-avatar" onclick="triggerAvatarUpload(this)">
+          <input type="file" accept="image/*" style="display:none" onchange="handleAvatarUpload(this)">
+          <span class="av-emoji">👦</span>
+          <div class="av-overlay">📷 Upload</div>
+        </div>
+        <p class="student-name" data-editable contenteditable="false">Muhammad Ravnilo Imran</p>
+        <p class="student-roll" data-editable contenteditable="false">Roll No. 003</p>
+      </div>
+      <div class="student-body">
+        <div class="info-row"><span class="info-label">Age</span><span class="info-val" data-editable contenteditable="false">16 years</span></div>
+        <div class="info-row"><span class="info-label">Father's Name</span><span class="info-val" data-editable contenteditable="false">Imran Majeed</span></div>
+        <div class="info-row"><span class="info-label">Address</span><span class="info-val" data-editable contenteditable="false">Ashiana City Burewala</span></div>
+        <div class="info-row"><span class="info-label">Phone</span><span class="info-val" data-editable contenteditable="false">-</span></div>
+        <div class="info-row"><span class="info-label">Weight</span><span class="info-val" data-editable contenteditable="false">50.5 kg</span></div>
+        <div class="info-row"><span class="info-label">Hobby</span><span class="info-val" data-editable contenteditable="false">Cricket with friends</span></div>
+        <div class="info-row"><span class="info-label">Hobby</span><span class="info-val" data-editable contenteditable="false">[Add Hobby]</span></div>
+        <div class="info-row"><span class="info-label">Career Goal</span><span class="info-val" data-editable contenteditable="false">Lawyer / Business</span></div>
+        <div class="marks-bar">
+          <p class="marks-label">Previous Class Marks</p>
+          <p style="font-size:.88rem;font-weight:700;color:var(--deep);margin-bottom:6px">520/555 — 94%</p>
+          <div class="bar-wrap"><div class="bar-fill" style="width:94%"></div></div>
+        </div>
+        <div class="fav-teacher"><span>⭐</span><div><p>Favourite Teacher</p><p data-editable contenteditable="false">Sir Ibrahim, Sir Sajid</p></div></div>
+      </div>
+    </div>
+
+    <!-- STUDENT 4 -->
+    <div class="student-card" data-type="student" data-id="student-4">
+      <button class="del-btn" onclick="confirmDelete(this)" title="Delete">✕</button>
+      <div class="student-card-top">
+        <div class="student-avatar" onclick="triggerAvatarUpload(this)">
+          <input type="file" accept="image/*" style="display:none" onchange="handleAvatarUpload(this)">
+          <span class="av-emoji">👦</span>
+          <div class="av-overlay">📷 Upload</div>
+        </div>
+        <p class="student-name" data-editable contenteditable="false">Abdullah Iqbal</p>
+        <p class="student-roll" data-editable contenteditable="false">Roll No. 004</p>
+      </div>
+      <div class="student-body">
+        <div class="info-row"><span class="info-label">Age</span><span class="info-val" data-editable contenteditable="false">17 years</span></div>
+        <div class="info-row"><span class="info-label">Father's Name</span><span class="info-val" data-editable contenteditable="false">Nadeem Atta</span></div>
+        <div class="info-row"><span class="info-label">Address</span><span class="info-val" data-editable contenteditable="false">Marifpura Chak C</span></div>
+        <div class="info-row"><span class="info-label">Phone</span><span class="info-val" data-editable contenteditable="false">-</span></div>
+        <div class="info-row"><span class="info-label">Weight</span><span class="info-val" data-editable contenteditable="false">-</span></div>
+        <div class="info-row"><span class="info-label">Hobby</span><span class="info-val" data-editable contenteditable="false">[Add Hobby]</span></div>
+        <div class="info-row"><span class="info-label">Hobby</span><span class="info-val" data-editable contenteditable="false">[Add Hobby]</span></div>
+        <div class="info-row"><span class="info-label">Career Goal</span><span class="info-val" data-editable contenteditable="false">Bio/Computer Science</span></div>
+        <div class="marks-bar">
+          <p class="marks-label">Previous Class Marks</p>
+          <p style="font-size:.88rem;font-weight:700;color:var(--deep);margin-bottom:6px">340/555 — 61%</p>
+          <div class="bar-wrap"><div class="bar-fill" style="width:61%"></div></div>
+        </div>
+        <div class="fav-teacher"><span>⭐</span><div><p>Favourite Teacher</p><p data-editable contenteditable="false">-</p></div></div>
+      </div>
+    </div>
+
+    <!-- STUDENT 5 -->
+    <div class="student-card" data-type="student" data-id="student-5">
+      <button class="del-btn" onclick="confirmDelete(this)" title="Delete">✕</button>
+      <div class="student-card-top">
+        <div class="student-avatar" onclick="triggerAvatarUpload(this)">
+          <input type="file" accept="image/*" style="display:none" onchange="handleAvatarUpload(this)">
+          <span class="av-emoji">👦</span>
+          <div class="av-overlay">📷 Upload</div>
+        </div>
+        <p class="student-name" data-editable contenteditable="false">Hamza Gujjar</p>
+        <p class="student-roll" data-editable contenteditable="false">Roll No. 005</p>
+      </div>
+      <div class="student-body">
+        <div class="info-row"><span class="info-label">Age</span><span class="info-val" data-editable contenteditable="false">16 years</span></div>
+        <div class="info-row"><span class="info-label">Father's Name</span><span class="info-val" data-editable contenteditable="false">Abdul Ghaffar</span></div>
+        <div class="info-row"><span class="info-label">Address</span><span class="info-val" data-editable contenteditable="false">House No 26 Chandar</span></div>
+        <div class="info-row"><span class="info-label">Phone</span><span class="info-val" data-editable contenteditable="false">03400205019</span></div>
+        <div class="info-row"><span class="info-label">Weight</span><span class="info-val" data-editable contenteditable="false">-</span></div>
+        <div class="info-row"><span class="info-label">Hobby</span><span class="info-val" data-editable contenteditable="false">[Add Hobby]</span></div>
+        <div class="info-row"><span class="info-label">Hobby</span><span class="info-val" data-editable contenteditable="false">[Add Hobby]</span></div>
+        <div class="info-row"><span class="info-label">Career Goal</span><span class="info-val" data-editable contenteditable="false">Computer Science</span></div>
+        <div class="marks-bar">
+          <p class="marks-label">Previous Class Marks</p>
+          <p style="font-size:.88rem;font-weight:700;color:var(--deep);margin-bottom:6px">467/545 — 86%</p>
+          <div class="bar-wrap"><div class="bar-fill" style="width:86%"></div></div>
+        </div>
+        <div class="fav-teacher"><span>⭐</span><div><p>Favourite Teacher</p><p data-editable contenteditable="false">Sir Sajid</p></div></div>
+      </div>
+    </div>
+
+    <!-- STUDENT 6 -->
+    <div class="student-card" data-type="student" data-id="student-6">
+      <button class="del-btn" onclick="confirmDelete(this)" title="Delete">✕</button>
+      <div class="student-card-top">
+        <div class="student-avatar" onclick="triggerAvatarUpload(this)">
+          <input type="file" accept="image/*" style="display:none" onchange="handleAvatarUpload(this)">
+          <span class="av-emoji">👦</span>
+          <div class="av-overlay">📷 Upload</div>
+        </div>
+        <p class="student-name" data-editable contenteditable="false">Abdullah Akram</p>
+        <p class="student-roll" data-editable contenteditable="false">Roll No. 006</p>
+      </div>
+      <div class="student-body">
+        <div class="info-row"><span class="info-label">Age</span><span class="info-val" data-editable contenteditable="false">16 years</span></div>
+        <div class="info-row"><span class="info-label">Father's Name</span><span class="info-val" data-editable contenteditable="false">Riaz ul Haq</span></div>
+        <div class="info-row"><span class="info-label">Address</span><span class="info-val" data-editable contenteditable="false">House # 21 Gawra Town</span></div>
+        <div class="info-row"><span class="info-label">Phone</span><span class="info-val" data-editable contenteditable="false">0312 6141951</span></div>
+        <div class="info-row"><span class="info-label">Weight</span><span class="info-val" data-editable contenteditable="false">-</span></div>
+        <div class="info-row"><span class="info-label">Hobby</span><span class="info-val" data-editable contenteditable="false">[Add Hobby]</span></div>
+        <div class="info-row"><span class="info-label">Hobby</span><span class="info-val" data-editable contenteditable="false">[Add Hobby]</span></div>
+        <div class="info-row"><span class="info-label">Career Goal</span><span class="info-val" data-editable contenteditable="false">Computer Science</span></div>
+        <div class="marks-bar">
+          <p class="marks-label">Previous Class Marks</p>
+          <p style="font-size:.88rem;font-weight:700;color:var(--deep);margin-bottom:6px">504/545 — 92%</p>
+          <div class="bar-wrap"><div class="bar-fill" style="width:92%"></div></div>
+        </div>
+        <div class="fav-teacher"><span>⭐</span><div><p>Favourite Teacher</p><p data-editable contenteditable="false">Sir Sajid</p></div></div>
+      </div>
+    </div>
+
+    <!-- STUDENT 7 -->
+    <div class="student-card" data-type="student" data-id="student-7">
+      <button class="del-btn" onclick="confirmDelete(this)" title="Delete">✕</button>
+      <div class="student-card-top">
+        <div class="student-avatar" onclick="triggerAvatarUpload(this)">
+          <input type="file" accept="image/*" style="display:none" onchange="handleAvatarUpload(this)">
+          <span class="av-emoji">👦</span>
+          <div class="av-overlay">📷 Upload</div>
+        </div>
+        <p class="student-name" data-editable contenteditable="false">Abdul Rahman</p>
+        <p class="student-roll" data-editable contenteditable="false">Roll No. 007</p>
+      </div>
+      <div class="student-body">
+        <div class="info-row"><span class="info-label">Age</span><span class="info-val" data-editable contenteditable="false">15 years</span></div>
+        <div class="info-row"><span class="info-label">Father's Name</span><span class="info-val" data-editable contenteditable="false">Shaukat Ali</span></div>
+        <div class="info-row"><span class="info-label">Address</span><span class="info-val" data-editable contenteditable="false">Shadman Colony</span></div>
+        <div class="info-row"><span class="info-label">Phone</span><span class="info-val" data-editable contenteditable="false">0303-7910346</span></div>
+        <div class="info-row"><span class="info-label">Weight</span><span class="info-val" data-editable contenteditable="false">-</span></div>
+        <div class="info-row"><span class="info-label">Hobby</span><span class="info-val" data-editable contenteditable="false">Taekwondo</span></div>
+        <div class="info-row"><span class="info-label">Hobby</span><span class="info-val" data-editable contenteditable="false">[Add Hobby]</span></div>
+        <div class="info-row"><span class="info-label">Career Goal</span><span class="info-val" data-editable contenteditable="false">Online Business</span></div>
+        <div class="marks-bar">
+          <p class="marks-label">Previous Class Marks</p>
+          <p style="font-size:.88rem;font-weight:700;color:var(--deep);margin-bottom:6px">494/555 — 89%</p>
+          <div class="bar-wrap"><div class="bar-fill" style="width:89%"></div></div>
+        </div>
+        <div class="fav-teacher"><span>⭐</span><div><p>Favourite Teacher</p><p data-editable contenteditable="false">Sir Sajid Iqbal</p></div></div>
+      </div>
+    </div>
+
+    <!-- STUDENT 8 -->
+    <div class="student-card" data-type="student" data-id="student-8">
+      <button class="del-btn" onclick="confirmDelete(this)" title="Delete">✕</button>
+      <div class="student-card-top">
+        <div class="student-avatar" onclick="triggerAvatarUpload(this)">
+          <input type="file" accept="image/*" style="display:none" onchange="handleAvatarUpload(this)">
+          <span class="av-emoji">👧</span>
+          <div class="av-overlay">📷 Upload</div>
+        </div>
+        <p class="student-name" data-editable contenteditable="false">[Student Name 8]</p>
+        <p class="student-roll" data-editable contenteditable="false">Roll No. 008</p>
+      </div>
+      <div class="student-body">
+        <div class="info-row"><span class="info-label">Age</span><span class="info-val" data-editable contenteditable="false">[17 years]</span></div>
+        <div class="info-row"><span class="info-label">Father's Name</span><span class="info-val" data-editable contenteditable="false">[Father Name]</span></div>
+        <div class="info-row"><span class="info-label">Address</span><span class="info-val" data-editable contenteditable="false">[City, Country]</span></div>
+        <div class="info-row"><span class="info-label">Phone</span><span class="info-val" data-editable contenteditable="false">[+XX XXX XXXX]</span></div>
+        <div class="info-row"><span class="info-label">Weight</span><span class="info-val" data-editable contenteditable="false">[53 kg]</span></div>
+        <div class="info-row"><span class="info-label">Hobby</span><span class="info-val" data-editable contenteditable="false">[Add Hobby]</span></div>
+        <div class="info-row"><span class="info-label">Hobby</span><span class="info-val" data-editable contenteditable="false">[Add Hobby]</span></div>
+        <div class="info-row"><span class="info-label">Career Goal</span><span class="info-val" data-editable contenteditable="false">[Designer]</span></div>
+        <div class="marks-bar">
+          <p class="marks-label">Previous Class Marks</p>
+          <p style="font-size:.88rem;font-weight:700;color:var(--deep);margin-bottom:6px">[870/1000] — 87%</p>
+          <div class="bar-wrap"><div class="bar-fill" style="width:87%"></div></div>
+        </div>
+        <div class="fav-teacher"><span>⭐</span><div><p>Favourite Teacher</p><p data-editable contenteditable="false">[Teacher Name]</p></div></div>
+      </div>
+    </div>
+
+    <!-- STUDENT 9 -->
+    <div class="student-card" data-type="student" data-id="student-9">
+      <button class="del-btn" onclick="confirmDelete(this)" title="Delete">✕</button>
+      <div class="student-card-top">
+        <div class="student-avatar" onclick="triggerAvatarUpload(this)">
+          <input type="file" accept="image/*" style="display:none" onchange="handleAvatarUpload(this)">
+          <span class="av-emoji">👦</span>
+          <div class="av-overlay">📷 Upload</div>
+        </div>
+        <p class="student-name" data-editable contenteditable="false">[Student Name 9]</p>
+        <p class="student-roll" data-editable contenteditable="false">Roll No. 009</p>
+      </div>
+      <div class="student-body">
+        <div class="info-row"><span class="info-label">Age</span><span class="info-val" data-editable contenteditable="false">[18 years]</span></div>
+        <div class="info-row"><span class="info-label">Father's Name</span><span class="info-val" data-editable contenteditable="false">[Father Name]</span></div>
+        <div class="info-row"><span class="info-label">Address</span><span class="info-val" data-editable contenteditable="false">[City, Country]</span></div>
+        <div class="info-row"><span class="info-label">Phone</span><span class="info-val" data-editable contenteditable="false">[+XX XXX XXXX]</span></div>
+        <div class="info-row"><span class="info-label">Weight</span><span class="info-val" data-editable contenteditable="false">[70 kg]</span></div>
+        <div class="info-row"><span class="info-label">Hobby</span><span class="info-val" data-editable contenteditable="false">[Add Hobby]</span></div>
+        <div class="info-row"><span class="info-label">Career Goal</span><span class="info-val" data-editable contenteditable="false">[Software Dev]</span></div>
+        <div class="marks-bar">
+          <p class="marks-label">Previous Class Marks</p>
+          <p style="font-size:.88rem;font-weight:700;color:var(--deep);margin-bottom:6px">[930/1000] — 93%</p>
+          <div class="bar-wrap"><div class="bar-fill" style="width:93%"></div></div>
+        </div>
+        <div class="fav-teacher"><span>⭐</span><div><p>Favourite Teacher</p><p data-editable contenteditable="false">[Teacher Name]</p></div></div>
+      </div>
+    </div>
+
+    <!-- STUDENT 10 -->
+    <div class="student-card" data-type="student" data-id="student-10">
+      <button class="del-btn" onclick="confirmDelete(this)" title="Delete">✕</button>
+      <div class="student-card-top">
+        <div class="student-avatar" onclick="triggerAvatarUpload(this)">
+          <input type="file" accept="image/*" style="display:none" onchange="handleAvatarUpload(this)">
+          <span class="av-emoji">👧</span>
+          <div class="av-overlay">📷 Upload</div>
+        </div>
+        <p class="student-name" data-editable contenteditable="false">[Student Name 10]</p>
+        <p class="student-roll" data-editable contenteditable="false">Roll No. 010</p>
+      </div>
+      <div class="student-body">
+        <div class="info-row"><span class="info-label">Age</span><span class="info-val" data-editable contenteditable="false">[17 years]</span></div>
+        <div class="info-row"><span class="info-label">Father's Name</span><span class="info-val" data-editable contenteditable="false">[Father Name]</span></div>
+        <div class="info-row"><span class="info-label">Address</span><span class="info-val" data-editable contenteditable="false">[City, Country]</span></div>
+        <div class="info-row"><span class="info-label">Phone</span><span class="info-val" data-editable contenteditable="false">[+XX XXX XXXX]</span></div>
+        <div class="info-row"><span class="info-label">Weight</span><span class="info-val" data-editable contenteditable="false">[48 kg]</span></div>
+        <div class="info-row"><span class="info-label">Hobby</span><span class="info-val" data-editable contenteditable="false">[Add Hobby]</span></div>
+        <div class="info-row"><span class="info-label">Career Goal</span><span class="info-val" data-editable contenteditable="false">[Teacher]</span></div>
+        <div class="marks-bar">
+          <p class="marks-label">Previous Class Marks</p>
+          <p style="font-size:.88rem;font-weight:700;color:var(--deep);margin-bottom:6px">[885/1000] — 88%</p>
+          <div class="bar-wrap"><div class="bar-fill" style="width:88%"></div></div>
+        </div>
+        <div class="fav-teacher"><span>⭐</span><div><p>Favourite Teacher</p><p data-editable contenteditable="false">[Teacher Name]</p></div></div>
+      </div>
+    </div>
+
+    <!-- STUDENT 11 -->
+    <div class="student-card" data-type="student" data-id="student-11">
+      <button class="del-btn" onclick="confirmDelete(this)" title="Delete">✕</button>
+      <div class="student-card-top">
+        <div class="student-avatar" onclick="triggerAvatarUpload(this)">
+          <input type="file" accept="image/*" style="display:none" onchange="handleAvatarUpload(this)">
+          <span class="av-emoji">👦</span>
+          <div class="av-overlay">📷 Upload</div>
+        </div>
+        <p class="student-name" data-editable contenteditable="false">[Student Name 11]</p>
+        <p class="student-roll" data-editable contenteditable="false">Roll No. 011</p>
+      </div>
+      <div class="student-body">
+        <div class="info-row"><span class="info-label">Age</span><span class="info-val" data-editable contenteditable="false">[18 years]</span></div>
+        <div class="info-row"><span class="info-label">Father's Name</span><span class="info-val" data-editable contenteditable="false">[Father Name]</span></div>
+        <div class="info-row"><span class="info-label">Address</span><span class="info-val" data-editable contenteditable="false">[City, Country]</span></div>
+        <div class="info-row"><span class="info-label">Phone</span><span class="info-val" data-editable contenteditable="false">[+XX XXX XXXX]</span></div>
+        <div class="info-row"><span class="info-label">Weight</span><span class="info-val" data-editable contenteditable="false">[65 kg]</span></div>
+        <div class="info-row"><span class="info-label">Hobby</span><span class="info-val" data-editable contenteditable="false">[Add Hobby]</span></div>
+        <div class="info-row"><span class="info-label">Career Goal</span><span class="info-val" data-editable contenteditable="false">[Accountant]</span></div>
+        <div class="marks-bar">
+          <p class="marks-label">Previous Class Marks</p>
+          <p style="font-size:.88rem;font-weight:700;color:var(--deep);margin-bottom:6px">[820/1000] — 82%</p>
+          <div class="bar-wrap"><div class="bar-fill" style="width:82%"></div></div>
+        </div>
+        <div class="fav-teacher"><span>⭐</span><div><p>Favourite Teacher</p><p data-editable contenteditable="false">[Teacher Name]</p></div></div>
+      </div>
+    </div>
+
+    <!-- STUDENT 12 -->
+    <div class="student-card" data-type="student" data-id="student-12">
+      <button class="del-btn" onclick="confirmDelete(this)" title="Delete">✕</button>
+      <div class="student-card-top">
+        <div class="student-avatar" onclick="triggerAvatarUpload(this)">
+          <input type="file" accept="image/*" style="display:none" onchange="handleAvatarUpload(this)">
+          <span class="av-emoji">👧</span>
+          <div class="av-overlay">📷 Upload</div>
+        </div>
+        <p class="student-name" data-editable contenteditable="false">[Student Name 12]</p>
+        <p class="student-roll" data-editable contenteditable="false">Roll No. 012</p>
+      </div>
+      <div class="student-body">
+        <div class="info-row"><span class="info-label">Age</span><span class="info-val" data-editable contenteditable="false">[17 years]</span></div>
+        <div class="info-row"><span class="info-label">Father's Name</span><span class="info-val" data-editable contenteditable="false">[Father Name]</span></div>
+        <div class="info-row"><span class="info-label">Address</span><span class="info-val" data-editable contenteditable="false">[City, Country]</span></div>
+        <div class="info-row"><span class="info-label">Phone</span><span class="info-val" data-editable contenteditable="false">[+XX XXX XXXX]</span></div>
+        <div class="info-row"><span class="info-label">Weight</span><span class="info-val" data-editable contenteditable="false">[51 kg]</span></div>
+        <div class="info-row"><span class="info-label">Hobby</span><span class="info-val" data-editable contenteditable="false">[Add Hobby]</span></div>
+        <div class="info-row"><span class="info-label">Career Goal</span><span class="info-val" data-editable contenteditable="false">[Nurse]</span></div>
+        <div class="marks-bar">
+          <p class="marks-label">Previous Class Marks</p>
+          <p style="font-size:.88rem;font-weight:700;color:var(--deep);margin-bottom:6px">[896/1000] — 89%</p>
+          <div class="bar-wrap"><div class="bar-fill" style="width:89%"></div></div>
+        </div>
+        <div class="fav-teacher"><span>⭐</span><div><p>Favourite Teacher</p><p data-editable contenteditable="false">[Teacher Name]</p></div></div>
+      </div>
+    </div>
+
+    <!-- STUDENT 13 -->
+    <div class="student-card" data-type="student" data-id="student-13">
+      <button class="del-btn" onclick="confirmDelete(this)" title="Delete">✕</button>
+      <div class="student-card-top">
+        <div class="student-avatar" onclick="triggerAvatarUpload(this)">
+          <input type="file" accept="image/*" style="display:none" onchange="handleAvatarUpload(this)">
+          <span class="av-emoji">👦</span>
+          <div class="av-overlay">📷 Upload</div>
+        </div>
+        <p class="student-name" data-editable contenteditable="false">[Student Name 13]</p>
+        <p class="student-roll" data-editable contenteditable="false">Roll No. 013</p>
+      </div>
+      <div class="student-body">
+        <div class="info-row"><span class="info-label">Age</span><span class="info-val" data-editable contenteditable="false">[18 years]</span></div>
+        <div class="info-row"><span class="info-label">Father's Name</span><span class="info-val" data-editable contenteditable="false">[Father Name]</span></div>
+        <div class="info-row"><span class="info-label">Address</span><span class="info-val" data-editable contenteditable="false">[City, Country]</span></div>
+        <div class="info-row"><span class="info-label">Phone</span><span class="info-val" data-editable contenteditable="false">[+XX XXX XXXX]</span></div>
+        <div class="info-row"><span class="info-label">Weight</span><span class="info-val" data-editable contenteditable="false">[73 kg]</span></div>
+        <div class="info-row"><span class="info-label">Hobby</span><span class="info-val" data-editable contenteditable="false">[Add Hobby]</span></div>
+        <div class="info-row"><span class="info-label">Career Goal</span><span class="info-val" data-editable contenteditable="false">[Banker]</span></div>
+        <div class="marks-bar">
+          <p class="marks-label">Previous Class Marks</p>
+          <p style="font-size:.88rem;font-weight:700;color:var(--deep);margin-bottom:6px">[740/1000] — 74%</p>
+          <div class="bar-wrap"><div class="bar-fill" style="width:74%"></div></div>
+        </div>
+        <div class="fav-teacher"><span>⭐</span><div><p>Favourite Teacher</p><p data-editable contenteditable="false">[Teacher Name]</p></div></div>
+      </div>
+    </div>
+
+    <!-- STUDENT 14 -->
+    <div class="student-card" data-type="student" data-id="student-14">
+      <button class="del-btn" onclick="confirmDelete(this)" title="Delete">✕</button>
+      <div class="student-card-top">
+        <div class="student-avatar" onclick="triggerAvatarUpload(this)">
+          <input type="file" accept="image/*" style="display:none" onchange="handleAvatarUpload(this)">
+          <span class="av-emoji">👧</span>
+          <div class="av-overlay">📷 Upload</div>
+        </div>
+        <p class="student-name" data-editable contenteditable="false">[Student Name 14]</p>
+        <p class="student-roll" data-editable contenteditable="false">Roll No. 014</p>
+      </div>
+      <div class="student-body">
+        <div class="info-row"><span class="info-label">Age</span><span class="info-val" data-editable contenteditable="false">[17 years]</span></div>
+        <div class="info-row"><span class="info-label">Father's Name</span><span class="info-val" data-editable contenteditable="false">[Father Name]</span></div>
+        <div class="info-row"><span class="info-label">Address</span><span class="info-val" data-editable contenteditable="false">[City, Country]</span></div>
+        <div class="info-row"><span class="info-label">Phone</span><span class="info-val" data-editable contenteditable="false">[+XX XXX XXXX]</span></div>
+        <div class="info-row"><span class="info-label">Weight</span><span class="info-val" data-editable contenteditable="false">[49 kg]</span></div>
+        <div class="info-row"><span class="info-label">Hobby</span><span class="info-val" data-editable contenteditable="false">[Add Hobby]</span></div>
+        <div class="info-row"><span class="info-label">Career Goal</span><span class="info-val" data-editable contenteditable="false">[Journalist]</span></div>
+        <div class="marks-bar">
+          <p class="marks-label">Previous Class Marks</p>
+          <p style="font-size:.88rem;font-weight:700;color:var(--deep);margin-bottom:6px">[905/1000] — 90%</p>
+          <div class="bar-wrap"><div class="bar-fill" style="width:90%"></div></div>
+        </div>
+        <div class="fav-teacher"><span>⭐</span><div><p>Favourite Teacher</p><p data-editable contenteditable="false">[Teacher Name]</p></div></div>
+      </div>
+    </div>
+
+    <!-- STUDENT 15 -->
+    <div class="student-card" data-type="student" data-id="student-15">
+      <button class="del-btn" onclick="confirmDelete(this)" title="Delete">✕</button>
+      <div class="student-card-top">
+        <div class="student-avatar" onclick="triggerAvatarUpload(this)">
+          <input type="file" accept="image/*" style="display:none" onchange="handleAvatarUpload(this)">
+          <span class="av-emoji">👦</span>
+          <div class="av-overlay">📷 Upload</div>
+        </div>
+        <p class="student-name" data-editable contenteditable="false">[Student Name 15]</p>
+        <p class="student-roll" data-editable contenteditable="false">Roll No. 015</p>
+      </div>
+      <div class="student-body">
+        <div class="info-row"><span class="info-label">Age</span><span class="info-val" data-editable contenteditable="false">[18 years]</span></div>
+        <div class="info-row"><span class="info-label">Father's Name</span><span class="info-val" data-editable contenteditable="false">[Father Name]</span></div>
+        <div class="info-row"><span class="info-label">Address</span><span class="info-val" data-editable contenteditable="false">[City, Country]</span></div>
+        <div class="info-row"><span class="info-label">Phone</span><span class="info-val" data-editable contenteditable="false">[+XX XXX XXXX]</span></div>
+        <div class="info-row"><span class="info-label">Weight</span><span class="info-val" data-editable contenteditable="false">[67 kg]</span></div>
+        <div class="info-row"><span class="info-label">Hobby</span><span class="info-val" data-editable contenteditable="false">[Add Hobby]</span></div>
+        <div class="info-row"><span class="info-label">Career Goal</span><span class="info-val" data-editable contenteditable="false">[Pharmacist]</span></div>
+        <div class="marks-bar">
+          <p class="marks-label">Previous Class Marks</p>
+          <p style="font-size:.88rem;font-weight:700;color:var(--deep);margin-bottom:6px">[860/1000] — 86%</p>
+          <div class="bar-wrap"><div class="bar-fill" style="width:86%"></div></div>
+        </div>
+        <div class="fav-teacher"><span>⭐</span><div><p>Favourite Teacher</p><p data-editable contenteditable="false">[Teacher Name]</p></div></div>
+      </div>
+    </div>
+
+    <!-- STUDENT 16 -->
+    <div class="student-card" data-type="student" data-id="student-16">
+      <button class="del-btn" onclick="confirmDelete(this)" title="Delete">✕</button>
+      <div class="student-card-top">
+        <div class="student-avatar" onclick="triggerAvatarUpload(this)">
+          <input type="file" accept="image/*" style="display:none" onchange="handleAvatarUpload(this)">
+          <span class="av-emoji">👧</span>
+          <div class="av-overlay">📷 Upload</div>
+        </div>
+        <p class="student-name" data-editable contenteditable="false">[Student Name 16]</p>
+        <p class="student-roll" data-editable contenteditable="false">Roll No. 016</p>
+      </div>
+      <div class="student-body">
+        <div class="info-row"><span class="info-label">Age</span><span class="info-val" data-editable contenteditable="false">[17 years]</span></div>
+        <div class="info-row"><span class="info-label">Father's Name</span><span class="info-val" data-editable contenteditable="false">[Father Name]</span></div>
+        <div class="info-row"><span class="info-label">Address</span><span class="info-val" data-editable contenteditable="false">[City, Country]</span></div>
+        <div class="info-row"><span class="info-label">Phone</span><span class="info-val" data-editable contenteditable="false">[+XX XXX XXXX]</span></div>
+        <div class="info-row"><span class="info-label">Weight</span><span class="info-val" data-editable contenteditable="false">[54 kg]</span></div>
+        <div class="info-row"><span class="info-label">Hobby</span><span class="info-val" data-editable contenteditable="false">[Add Hobby]</span></div>
+        <div class="info-row"><span class="info-label">Career Goal</span><span class="info-val" data-editable contenteditable="false">[Psychologist]</span></div>
+        <div class="marks-bar">
+          <p class="marks-label">Previous Class Marks</p>
+          <p style="font-size:.88rem;font-weight:700;color:var(--deep);margin-bottom:6px">[940/1000] — 94%</p>
+          <div class="bar-wrap"><div class="bar-fill" style="width:94%"></div></div>
+        </div>
+        <div class="fav-teacher"><span>⭐</span><div><p>Favourite Teacher</p><p data-editable contenteditable="false">[Teacher Name]</p></div></div>
+      </div>
+    </div>
+
+    <!-- STUDENT 17 -->
+    <div class="student-card" data-type="student" data-id="student-17">
+      <button class="del-btn" onclick="confirmDelete(this)" title="Delete">✕</button>
+      <div class="student-card-top">
+        <div class="student-avatar" onclick="triggerAvatarUpload(this)">
+          <input type="file" accept="image/*" style="display:none" onchange="handleAvatarUpload(this)">
+          <span class="av-emoji">👦</span>
+          <div class="av-overlay">📷 Upload</div>
+        </div>
+        <p class="student-name" data-editable contenteditable="false">[Student Name 17]</p>
+        <p class="student-roll" data-editable contenteditable="false">Roll No. 017</p>
+      </div>
+      <div class="student-body">
+        <div class="info-row"><span class="info-label">Age</span><span class="info-val" data-editable contenteditable="false">[18 years]</span></div>
+        <div class="info-row"><span class="info-label">Father's Name</span><span class="info-val" data-editable contenteditable="false">[Father Name]</span></div>
+        <div class="info-row"><span class="info-label">Address</span><span class="info-val" data-editable contenteditable="false">[City, Country]</span></div>
+        <div class="info-row"><span class="info-label">Phone</span><span class="info-val" data-editable contenteditable="false">[+XX XXX XXXX]</span></div>
+        <div class="info-row"><span class="info-label">Weight</span><span class="info-val" data-editable contenteditable="false">[71 kg]</span></div>
+        <div class="info-row"><span class="info-label">Hobby</span><span class="info-val" data-editable contenteditable="false">[Add Hobby]</span></div>
+        <div class="info-row"><span class="info-label">Career Goal</span><span class="info-val" data-editable contenteditable="false">[Civil Engineer]</span></div>
+        <div class="marks-bar">
+          <p class="marks-label">Previous Class Marks</p>
+          <p style="font-size:.88rem;font-weight:700;color:var(--deep);margin-bottom:6px">[810/1000] — 81%</p>
+          <div class="bar-wrap"><div class="bar-fill" style="width:81%"></div></div>
+        </div>
+        <div class="fav-teacher"><span>⭐</span><div><p>Favourite Teacher</p><p data-editable contenteditable="false">[Teacher Name]</p></div></div>
+      </div>
+    </div>
+
+    <!-- STUDENT 18 -->
+    <div class="student-card" data-type="student" data-id="student-18">
+      <button class="del-btn" onclick="confirmDelete(this)" title="Delete">✕</button>
+      <div class="student-card-top">
+        <div class="student-avatar" onclick="triggerAvatarUpload(this)">
+          <input type="file" accept="image/*" style="display:none" onchange="handleAvatarUpload(this)">
+          <span class="av-emoji">👧</span>
+          <div class="av-overlay">📷 Upload</div>
+        </div>
+        <p class="student-name" data-editable contenteditable="false">[Student Name 18]</p>
+        <p class="student-roll" data-editable contenteditable="false">Roll No. 018</p>
+      </div>
+      <div class="student-body">
+        <div class="info-row"><span class="info-label">Age</span><span class="info-val" data-editable contenteditable="false">[17 years]</span></div>
+        <div class="info-row"><span class="info-label">Father's Name</span><span class="info-val" data-editable contenteditable="false">[Father Name]</span></div>
+        <div class="info-row"><span class="info-label">Address</span><span class="info-val" data-editable contenteditable="false">[City, Country]</span></div>
+        <div class="info-row"><span class="info-label">Phone</span><span class="info-val" data-editable contenteditable="false">[+XX XXX XXXX]</span></div>
+        <div class="info-row"><span class="info-label">Weight</span><span class="info-val" data-editable contenteditable="false">[47 kg]</span></div>
+        <div class="info-row"><span class="info-label">Hobby</span><span class="info-val" data-editable contenteditable="false">[Add Hobby]</span></div>
+        <div class="info-row"><span class="info-label">Career Goal</span><span class="info-val" data-editable contenteditable="false">[Dentist]</span></div>
+        <div class="marks-bar">
+          <p class="marks-label">Previous Class Marks</p>
+          <p style="font-size:.88rem;font-weight:700;color:var(--deep);margin-bottom:6px">[920/1000] — 92%</p>
+          <div class="bar-wrap"><div class="bar-fill" style="width:92%"></div></div>
+        </div>
+        <div class="fav-teacher"><span>⭐</span><div><p>Favourite Teacher</p><p data-editable contenteditable="false">[Teacher Name]</p></div></div>
+      </div>
+    </div>
+
+    <!-- STUDENT 19 -->
+    <div class="student-card" data-type="student" data-id="student-19">
+      <button class="del-btn" onclick="confirmDelete(this)" title="Delete">✕</button>
+      <div class="student-card-top">
+        <div class="student-avatar" onclick="triggerAvatarUpload(this)">
+          <input type="file" accept="image/*" style="display:none" onchange="handleAvatarUpload(this)">
+          <span class="av-emoji">👦</span>
+          <div class="av-overlay">📷 Upload</div>
+        </div>
+        <p class="student-name" data-editable contenteditable="false">[Student Name 19]</p>
+        <p class="student-roll" data-editable contenteditable="false">Roll No. 019</p>
+      </div>
+      <div class="student-body">
+        <div class="info-row"><span class="info-label">Age</span><span class="info-val" data-editable contenteditable="false">[18 years]</span></div>
+        <div class="info-row"><span class="info-label">Father's Name</span><span class="info-val" data-editable contenteditable="false">[Father Name]</span></div>
+        <div class="info-row"><span class="info-label">Address</span><span class="info-val" data-editable contenteditable="false">[City, Country]</span></div>
+        <div class="info-row"><span class="info-label">Phone</span><span class="info-val" data-editable contenteditable="false">[+XX XXX XXXX]</span></div>
+        <div class="info-row"><span class="info-label">Weight</span><span class="info-val" data-editable contenteditable="false">[69 kg]</span></div>
+        <div class="info-row"><span class="info-label">Hobby</span><span class="info-val" data-editable contenteditable="false">[Add Hobby]</span></div>
+        <div class="info-row"><span class="info-label">Career Goal</span><span class="info-val" data-editable contenteditable="false">[Economist]</span></div>
+        <div class="marks-bar">
+          <p class="marks-label">Previous Class Marks</p>
+          <p style="font-size:.88rem;font-weight:700;color:var(--deep);margin-bottom:6px">[830/1000] — 83%</p>
+          <div class="bar-wrap"><div class="bar-fill" style="width:83%"></div></div>
+        </div>
+        <div class="fav-teacher"><span>⭐</span><div><p>Favourite Teacher</p><p data-editable contenteditable="false">[Teacher Name]</p></div></div>
+      </div>
+    </div>
+
+    <!-- STUDENT 20 -->
+    <div class="student-card" data-type="student" data-id="student-20">
+      <button class="del-btn" onclick="confirmDelete(this)" title="Delete">✕</button>
+      <div class="student-card-top">
+        <div class="student-avatar" onclick="triggerAvatarUpload(this)">
+          <input type="file" accept="image/*" style="display:none" onchange="handleAvatarUpload(this)">
+          <span class="av-emoji">👧</span>
+          <div class="av-overlay">📷 Upload</div>
+        </div>
+        <p class="student-name" data-editable contenteditable="false">[Student Name 20]</p>
+        <p class="student-roll" data-editable contenteditable="false">Roll No. 020</p>
+      </div>
+      <div class="student-body">
+        <div class="info-row"><span class="info-label">Age</span><span class="info-val" data-editable contenteditable="false">[17 years]</span></div>
+        <div class="info-row"><span class="info-label">Father's Name</span><span class="info-val" data-editable contenteditable="false">[Father Name]</span></div>
+        <div class="info-row"><span class="info-label">Address</span><span class="info-val" data-editable contenteditable="false">[City, Country]</span></div>
+        <div class="info-row"><span class="info-label">Phone</span><span class="info-val" data-editable contenteditable="false">[+XX XXX XXXX]</span></div>
+        <div class="info-row"><span class="info-label">Weight</span><span class="info-val" data-editable contenteditable="false">[52 kg]</span></div>
+        <div class="info-row"><span class="info-label">Hobby</span><span class="info-val" data-editable contenteditable="false">[Add Hobby]</span></div>
+        <div class="info-row"><span class="info-label">Career Goal</span><span class="info-val" data-editable contenteditable="false">[Fashion Designer]</span></div>
+        <div class="marks-bar">
+          <p class="marks-label">Previous Class Marks</p>
+          <p style="font-size:.88rem;font-weight:700;color:var(--deep);margin-bottom:6px">[875/1000] — 87%</p>
+          <div class="bar-wrap"><div class="bar-fill" style="width:87%"></div></div>
+        </div>
+        <div class="fav-teacher"><span>⭐</span><div><p>Favourite Teacher</p><p data-editable contenteditable="false">[Teacher Name]</p></div></div>
+      </div>
+    </div>
+
+    <!-- STUDENT 21 -->
+    <div class="student-card" data-type="student" data-id="student-21">
+      <button class="del-btn" onclick="confirmDelete(this)" title="Delete">✕</button>
+      <div class="student-card-top">
+        <div class="student-avatar" onclick="triggerAvatarUpload(this)">
+          <input type="file" accept="image/*" style="display:none" onchange="handleAvatarUpload(this)">
+          <span class="av-emoji">👦</span>
+          <div class="av-overlay">📷 Upload</div>
+        </div>
+        <p class="student-name" data-editable contenteditable="false">[Student Name 21]</p>
+        <p class="student-roll" data-editable contenteditable="false">Roll No. 021</p>
+      </div>
+      <div class="student-body">
+        <div class="info-row"><span class="info-label">Age</span><span class="info-val" data-editable contenteditable="false">[18 years]</span></div>
+        <div class="info-row"><span class="info-label">Father's Name</span><span class="info-val" data-editable contenteditable="false">[Father Name]</span></div>
+        <div class="info-row"><span class="info-label">Address</span><span class="info-val" data-editable contenteditable="false">[City, Country]</span></div>
+        <div class="info-row"><span class="info-label">Phone</span><span class="info-val" data-editable contenteditable="false">[+XX XXX XXXX]</span></div>
+        <div class="info-row"><span class="info-label">Weight</span><span class="info-val" data-editable contenteditable="false">[66 kg]</span></div>
+        <div class="info-row"><span class="info-label">Hobby</span><span class="info-val" data-editable contenteditable="false">[Add Hobby]</span></div>
+        <div class="info-row"><span class="info-label">Career Goal</span><span class="info-val" data-editable contenteditable="false">[Army Officer]</span></div>
+        <div class="marks-bar">
+          <p class="marks-label">Previous Class Marks</p>
+          <p style="font-size:.88rem;font-weight:700;color:var(--deep);margin-bottom:6px">[790/1000] — 79%</p>
+          <div class="bar-wrap"><div class="bar-fill" style="width:79%"></div></div>
+        </div>
+        <div class="fav-teacher"><span>⭐</span><div><p>Favourite Teacher</p><p data-editable contenteditable="false">[Teacher Name]</p></div></div>
+      </div>
+    </div>
+
+    <!-- STUDENT 22 -->
+    <div class="student-card" data-type="student" data-id="student-22">
+      <button class="del-btn" onclick="confirmDelete(this)" title="Delete">✕</button>
+      <div class="student-card-top">
+        <div class="student-avatar" onclick="triggerAvatarUpload(this)">
+          <input type="file" accept="image/*" style="display:none" onchange="handleAvatarUpload(this)">
+          <span class="av-emoji">👧</span>
+          <div class="av-overlay">📷 Upload</div>
+        </div>
+        <p class="student-name" data-editable contenteditable="false">[Student Name 22]</p>
+        <p class="student-roll" data-editable contenteditable="false">Roll No. 022</p>
+      </div>
+      <div class="student-body">
+        <div class="info-row"><span class="info-label">Age</span><span class="info-val" data-editable contenteditable="false">[17 years]</span></div>
+        <div class="info-row"><span class="info-label">Father's Name</span><span class="info-val" data-editable contenteditable="false">[Father Name]</span></div>
+        <div class="info-row"><span class="info-label">Address</span><span class="info-val" data-editable contenteditable="false">[City, Country]</span></div>
+        <div class="info-row"><span class="info-label">Phone</span><span class="info-val" data-editable contenteditable="false">[+XX XXX XXXX]</span></div>
+        <div class="info-row"><span class="info-label">Weight</span><span class="info-val" data-editable contenteditable="false">[50 kg]</span></div>
+        <div class="info-row"><span class="info-label">Hobby</span><span class="info-val" data-editable contenteditable="false">[Add Hobby]</span></div>
+        <div class="info-row"><span class="info-label">Career Goal</span><span class="info-val" data-editable contenteditable="false">[Veterinarian]</span></div>
+        <div class="marks-bar">
+          <p class="marks-label">Previous Class Marks</p>
+          <p style="font-size:.88rem;font-weight:700;color:var(--deep);margin-bottom:6px">[915/1000] — 91%</p>
+          <div class="bar-wrap"><div class="bar-fill" style="width:91%"></div></div>
+        </div>
+        <div class="fav-teacher"><span>⭐</span><div><p>Favourite Teacher</p><p data-editable contenteditable="false">[Teacher Name]</p></div></div>
+      </div>
+    </div>
+
+    <!-- STUDENT 23 -->
+    <div class="student-card" data-type="student" data-id="student-23">
+      <button class="del-btn" onclick="confirmDelete(this)" title="Delete">✕</button>
+      <div class="student-card-top">
+        <div class="student-avatar" onclick="triggerAvatarUpload(this)">
+          <input type="file" accept="image/*" style="display:none" onchange="handleAvatarUpload(this)">
+          <span class="av-emoji">👦</span>
+          <div class="av-overlay">📷 Upload</div>
+        </div>
+        <p class="student-name" data-editable contenteditable="false">[Student Name 23]</p>
+        <p class="student-roll" data-editable contenteditable="false">Roll No. 023</p>
+      </div>
+      <div class="student-body">
+        <div class="info-row"><span class="info-label">Age</span><span class="info-val" data-editable contenteditable="false">[18 years]</span></div>
+        <div class="info-row"><span class="info-label">Father's Name</span><span class="info-val" data-editable contenteditable="false">[Father Name]</span></div>
+        <div class="info-row"><span class="info-label">Address</span><span class="info-val" data-editable contenteditable="false">[City, Country]</span></div>
+        <div class="info-row"><span class="info-label">Phone</span><span class="info-val" data-editable contenteditable="false">[+XX XXX XXXX]</span></div>
+        <div class="info-row"><span class="info-label">Weight</span><span class="info-val" data-editable contenteditable="false">[74 kg]</span></div>
+        <div class="info-row"><span class="info-label">Hobby</span><span class="info-val" data-editable contenteditable="false">[Add Hobby]</span></div>
+        <div class="info-row"><span class="info-label">Career Goal</span><span class="info-val" data-editable contenteditable="false">[Electrical Eng.]</span></div>
+        <div class="marks-bar">
+          <p class="marks-label">Previous Class Marks</p>
+          <p style="font-size:.88rem;font-weight:700;color:var(--deep);margin-bottom:6px">[850/1000] — 85%</p>
+          <div class="bar-wrap"><div class="bar-fill" style="width:85%"></div></div>
+        </div>
+        <div class="fav-teacher"><span>⭐</span><div><p>Favourite Teacher</p><p data-editable contenteditable="false">[Teacher Name]</p></div></div>
+      </div>
+    </div>
+
+    <!-- STUDENT 24 -->
+    <div class="student-card" data-type="student" data-id="student-24">
+      <button class="del-btn" onclick="confirmDelete(this)" title="Delete">✕</button>
+      <div class="student-card-top">
+        <div class="student-avatar" onclick="triggerAvatarUpload(this)">
+          <input type="file" accept="image/*" style="display:none" onchange="handleAvatarUpload(this)">
+          <span class="av-emoji">👧</span>
+          <div class="av-overlay">📷 Upload</div>
+        </div>
+        <p class="student-name" data-editable contenteditable="false">[Student Name 24]</p>
+        <p class="student-roll" data-editable contenteditable="false">Roll No. 024</p>
+      </div>
+      <div class="student-body">
+        <div class="info-row"><span class="info-label">Age</span><span class="info-val" data-editable contenteditable="false">[17 years]</span></div>
+        <div class="info-row"><span class="info-label">Father's Name</span><span class="info-val" data-editable contenteditable="false">[Father Name]</span></div>
+        <div class="info-row"><span class="info-label">Address</span><span class="info-val" data-editable contenteditable="false">[City, Country]</span></div>
+        <div class="info-row"><span class="info-label">Phone</span><span class="info-val" data-editable contenteditable="false">[+XX XXX XXXX]</span></div>
+        <div class="info-row"><span class="info-label">Weight</span><span class="info-val" data-editable contenteditable="false">[48 kg]</span></div>
+        <div class="info-row"><span class="info-label">Hobby</span><span class="info-val" data-editable contenteditable="false">[Add Hobby]</span></div>
+        <div class="info-row"><span class="info-label">Career Goal</span><span class="info-val" data-editable contenteditable="false">[Author]</span></div>
+        <div class="marks-bar">
+          <p class="marks-label">Previous Class Marks</p>
+          <p style="font-size:.88rem;font-weight:700;color:var(--deep);margin-bottom:6px">[950/1000] — 95%</p>
+          <div class="bar-wrap"><div class="bar-fill" style="width:95%"></div></div>
+        </div>
+        <div class="fav-teacher"><span>⭐</span><div><p>Favourite Teacher</p><p data-editable contenteditable="false">[Teacher Name]</p></div></div>
+      </div>
+    </div>
+
+    <!-- STUDENT 25 -->
+    <div class="student-card" data-type="student" data-id="student-25">
+      <button class="del-btn" onclick="confirmDelete(this)" title="Delete">✕</button>
+      <div class="student-card-top">
+        <div class="student-avatar" onclick="triggerAvatarUpload(this)">
+          <input type="file" accept="image/*" style="display:none" onchange="handleAvatarUpload(this)">
+          <span class="av-emoji">👦</span>
+          <div class="av-overlay">📷 Upload</div>
+        </div>
+        <p class="student-name" data-editable contenteditable="false">[Student Name 25]</p>
+        <p class="student-roll" data-editable contenteditable="false">Roll No. 025</p>
+      </div>
+      <div class="student-body">
+        <div class="info-row"><span class="info-label">Age</span><span class="info-val" data-editable contenteditable="false">[18 years]</span></div>
+        <div class="info-row"><span class="info-label">Father's Name</span><span class="info-val" data-editable contenteditable="false">[Father Name]</span></div>
+        <div class="info-row"><span class="info-label">Address</span><span class="info-val" data-editable contenteditable="false">[City, Country]</span></div>
+        <div class="info-row"><span class="info-label">Phone</span><span class="info-val" data-editable contenteditable="false">[+XX XXX XXXX]</span></div>
+        <div class="info-row"><span class="info-label">Weight</span><span class="info-val" data-editable contenteditable="false">[63 kg]</span></div>
+        <div class="info-row"><span class="info-label">Hobby</span><span class="info-val" data-editable contenteditable="false">[Add Hobby]</span></div>
+        <div class="info-row"><span class="info-label">Career Goal</span><span class="info-val" data-editable contenteditable="false">[Entrepreneur]</span></div>
+        <div class="marks-bar">
+          <p class="marks-label">Previous Class Marks</p>
+          <p style="font-size:.88rem;font-weight:700;color:var(--deep);margin-bottom:6px">[900/1000] — 90%</p>
+          <div class="bar-wrap"><div class="bar-fill" style="width:90%"></div></div>
+        </div>
+        <div class="fav-teacher"><span>⭐</span><div><p>Favourite Teacher</p><p data-editable contenteditable="false">[Teacher Name]</p></div></div>
+      </div>
+    </div>
+
+    <!-- ADD MORE -->
+    <div class="student-card" style="border:2px dashed #d0c8b8;background:transparent;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;min-height:200px;cursor:pointer;color:#bbb;transition:.2s" onmouseover="this.style.borderColor='var(--gold)';this.style.color='var(--gold)'" onmouseout="this.style.borderColor='#d0c8b8';this.style.color='#bbb'">
+      <span style="font-size:2.5rem">➕</span>
+      <p style="font-size:.9rem;letter-spacing:1px;text-transform:uppercase">Add Student</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- TEACHERS SECTION -->
+<section class="teachers-section" id="teachers">
+  <div class="section-head">
+    <p class="section-lbl" style="color:rgba(201,168,76,.8)">The Guiding Stars</p>
+    <h2 class="section-ttl" style="color:#fff">Our Beloved Teachers</h2>
+    <div class="divider" style="background:linear-gradient(90deg,var(--gold),transparent)"></div>
+  </div>
+  <div class="teachers-grid">
+
+    <!-- TEACHER 1: Sajid Iqbal -->
+    <div class="teacher-card" data-type="teacher" data-id="teacher-1">
+      <button class="del-btn" onclick="confirmDelete(this)" title="Delete">✕</button>
+      <div class="teacher-pics">
+        <div class="teacher-pic" style="font-size:3.5rem" onclick="triggerTeacherPic(this)">
+          <input type="file" accept="image/*" style="display:none" onchange="handleTeacherPic(this)">
+          👨‍🏫
+          <div class="tp-overlay">📷<span>Upload</span></div>
+        </div>
+        <div class="teacher-pic" onclick="triggerTeacherPic(this)">
+          <input type="file" accept="image/*" style="display:none" onchange="handleTeacherPic(this)">
+          📚
+          <div class="tp-overlay">📷<span>Upload</span></div>
+        </div>
+        <div class="teacher-pic" onclick="triggerTeacherPic(this)">
+          <input type="file" accept="image/*" style="display:none" onchange="handleTeacherPic(this)">
+          🎓
+          <div class="tp-overlay">📷<span>Upload</span></div>
+        </div>
+        <div class="teacher-pic" onclick="triggerTeacherPic(this)">
+          <input type="file" accept="image/*" style="display:none" onchange="handleTeacherPic(this)">
+          🏫
+          <div class="tp-overlay">📷<span>Upload</span></div>
+        </div>
+      </div>
+      <div class="teacher-body">
+        <p class="teacher-name" data-editable contenteditable="false">Sajid Iqbal</p>
+        <div class="teacher-degree">M.Phil Mathematics</div>
+        <p class="teacher-subject" data-editable contenteditable="false">Mathematics & Physics</p>
+        <div class="teacher-info-grid">
+          <div class="t-info"><p class="t-info-lbl">Father's Name</p><p class="t-info-val" data-editable contenteditable="false">Ghulam Muhammad</p></div>
+          <div class="t-info"><p class="t-info-lbl">Age</p><p class="t-info-val" data-editable contenteditable="false">37 Years</p></div>
+          <div class="t-info"><p class="t-info-lbl">Address</p><p class="t-info-val" data-editable contenteditable="false">New Model Town Stadium Road, Burewala</p></div>
+          <div class="t-info"><p class="t-info-lbl">Phone</p><p class="t-info-val" data-editable contenteditable="false">3011061839</p></div>
+        </div>
+        <div class="teacher-quote" data-editable contenteditable="false">"Education is not the filling of a pail, but the lighting of a fire. Watching you grow in mathematics and physics has been the greatest joy of my teaching journey."</div>
+      </div>
+    </div>
+
+    <!-- TEACHER 2: Abdul Rasheed Hafiz Muhammad Sadeeq -->
+    <div class="teacher-card" data-type="teacher" data-id="teacher-2">
+      <button class="del-btn" onclick="confirmDelete(this)" title="Delete">✕</button>
+      <div class="teacher-pics">
+        <div class="teacher-pic" style="font-size:3.5rem" onclick="triggerTeacherPic(this)">
+          <input type="file" accept="image/*" style="display:none" onchange="handleTeacherPic(this)">
+          👨‍🏫
+          <div class="tp-overlay">📷<span>Upload</span></div>
+        </div>
+        <div class="teacher-pic" onclick="triggerTeacherPic(this)">
+          <input type="file" accept="image/*" style="display:none" onchange="handleTeacherPic(this)">
+          📖
+          <div class="tp-overlay">📷<span>Upload</span></div>
+        </div>
+        <div class="teacher-pic" onclick="triggerTeacherPic(this)">
+          <input type="file" accept="image/*" style="display:none" onchange="handleTeacherPic(this)">
+          🕌
+          <div class="tp-overlay">📷<span>Upload</span></div>
+        </div>
+        <div class="teacher-pic" onclick="triggerTeacherPic(this)">
+          <input type="file" accept="image/*" style="display:none" onchange="handleTeacherPic(this)">
+          ✍️
+          <div class="tp-overlay">📷<span>Upload</span></div>
+        </div>
+      </div>
+      <div class="teacher-body">
+        <p class="teacher-name" data-editable contenteditable="false">Abdul Rasheed Hafiz Muhammad Sadeeq</p>
+        <div class="teacher-degree">M.A Arabic</div>
+        <p class="teacher-subject" data-editable contenteditable="false">Tarjamat-ul-Quran</p>
+        <div class="teacher-info-grid">
+          <div class="t-info"><p class="t-info-lbl">Father's Name</p><p class="t-info-val" data-editable contenteditable="false">Marhum</p></div>
+          <div class="t-info"><p class="t-info-lbl">Age</p><p class="t-info-val" data-editable contenteditable="false">55 Years</p></div>
+          <div class="t-info"><p class="t-info-lbl">Address</p><p class="t-info-val" data-editable contenteditable="false">Mujahid Colony</p></div>
+          <div class="t-info"><p class="t-info-lbl">Qualification</p><p class="t-info-val" data-editable contenteditable="false">M.A Arabic</p></div>
+        </div>
+        <div class="teacher-quote" data-editable contenteditable="false">"The Quran is a guide for all aspects of life. May the knowledge you've gained illuminate your path and bring blessings to your journey ahead."</div>
+      </div>
+    </div>
+
+    <!-- TEACHER 3: G A Raja -->
+    <div class="teacher-card" data-type="teacher" data-id="teacher-3">
+      <button class="del-btn" onclick="confirmDelete(this)" title="Delete">✕</button>
+      <div class="teacher-pics">
+        <div class="teacher-pic" style="font-size:3.5rem" onclick="triggerTeacherPic(this)">
+          <input type="file" accept="image/*" style="display:none" onchange="handleTeacherPic(this)">
+          👨‍🏫
+          <div class="tp-overlay">📷<span>Upload</span></div>
+        </div>
+        <div class="teacher-pic" onclick="triggerTeacherPic(this)">
+          <input type="file" accept="image/*" style="display:none" onchange="handleTeacherPic(this)">
+          ⚽
+          <div class="tp-overlay">📷<span>Upload</span></div>
+        </div>
+        <div class="teacher-pic" onclick="triggerTeacherPic(this)">
+          <input type="file" accept="image/*" style="display:none" onchange="handleTeacherPic(this)">
+          🥋
+          <div class="tp-overlay">📷<span>Upload</span></div>
+        </div>
+        <div class="teacher-pic" onclick="triggerTeacherPic(this)">
+          <input type="file" accept="image/*" style="display:none" onchange="handleTeacherPic(this)">
+          🏆
+          <div class="tp-overlay">📷<span>Upload</span></div>
+        </div>
+      </div>
+      <div class="teacher-body">
+        <p class="teacher-name" data-editable contenteditable="false">G A Raja</p>
+        <div class="teacher-degree">4th Dan Black Belt</div>
+        <p class="teacher-subject" data-editable contenteditable="false">Sports & Physical Education</p>
+        <div class="teacher-info-grid">
+          <div class="t-info"><p class="t-info-lbl">Father's Name</p><p class="t-info-val" data-editable contenteditable="false">M. Tufail</p></div>
+          <div class="t-info"><p class="t-info-lbl">Age</p><p class="t-info-val" data-editable contenteditable="false">48 Years</p></div>
+          <div class="t-info"><p class="t-info-lbl">Address</p><p class="t-info-val" data-editable contenteditable="false">Multan Road, Burewala</p></div>
+          <div class="t-info"><p class="t-info-lbl">Phone</p><p class="t-info-val" data-editable contenteditable="false">3007591855</p></div>
+        </div>
+        <div class="teacher-quote" data-editable contenteditable="false">"Champions are made in practice, not in competition. Your dedication and discipline on the field have been truly inspiring. Keep pushing your limits!"</div>
+      </div>
+    </div>
+
+    <!-- TEACHER 4: Naveed Ahmad -->
+    <div class="teacher-card" data-type="teacher" data-id="teacher-4">
+      <button class="del-btn" onclick="confirmDelete(this)" title="Delete">✕</button>
+      <div class="teacher-pics">
+        <div class="teacher-pic" style="font-size:3.5rem" onclick="triggerTeacherPic(this)">
+          <input type="file" accept="image/*" style="display:none" onchange="handleTeacherPic(this)">
+          👨‍🏫
+          <div class="tp-overlay">📷<span>Upload</span></div>
+        </div>
+        <div class="teacher-pic" onclick="triggerTeacherPic(this)">
+          <input type="file" accept="image/*" style="display:none" onchange="handleTeacherPic(this)">
+          📐
+          <div class="tp-overlay">📷<span>Upload</span></div>
+        </div>
+        <div class="teacher-pic" onclick="triggerTeacherPic(this)">
+          <input type="file" accept="image/*" style="display:none" onchange="handleTeacherPic(this)">
+          📚
+          <div class="tp-overlay">📷<span>Upload</span></div>
+        </div>
+        <div class="teacher-pic" onclick="triggerTeacherPic(this)">
+          <input type="file" accept="image/*" style="display:none" onchange="handleTeacherPic(this)">
+          🌍
+          <div class="tp-overlay">📷<span>Upload</span></div>
+        </div>
+      </div>
+      <div class="teacher-body">
+        <p class="teacher-name" data-editable contenteditable="false">Naveed Ahmad</p>
+        <div class="teacher-degree">M.A Mathematics, B.S English</div>
+        <p class="teacher-subject" data-editable contenteditable="false">Studies & Mathematics</p>
+        <div class="teacher-info-grid">
+          <div class="t-info"><p class="t-info-lbl">Age</p><p class="t-info-val" data-editable contenteditable="false">38 Years</p></div>
+          <div class="t-info"><p class="t-info-lbl">Address</p><p class="t-info-val" data-editable contenteditable="false">Chak 515 E.B, Pakistan</p></div>
+          <div class="t-info"><p class="t-info-lbl">Phone</p><p class="t-info-val" data-editable contenteditable="false">3080090515</p></div>
+          <div class="t-info"><p class="t-info-lbl">Qualification</p><p class="t-info-val" data-editable contenteditable="false">M.A Math, B.S English</p></div>
+        </div>
+        <div class="teacher-quote" data-editable contenteditable="false">"Mathematics is the language of the universe, and English opens doors to the world. You have mastered both beautifully. Go forth and achieve greatness!"</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- VIDEOS SECTION -->
+<section class="videos-section" id="videos">
+  <div class="section-head">
+    <p class="section-lbl">Moving Memories</p>
+    <h2 class="section-ttl">Videos & Highlights</h2>
+    <div class="divider"></div>
+  </div>
+  <div class="videos-grid">
+
+    <div class="video-card" data-type="video" data-id="video-1">
+      <button class="del-btn" onclick="confirmDelete(this)" title="Delete">✕</button>>
+      <div class="video-thumb">
+        <div class="play-btn">▶</div>
+        <div style="position:absolute;top:12px;left:12px;background:var(--gold);color:var(--deep);font-size:.65rem;font-weight:700;padding:3px 10px;border-radius:50px;letter-spacing:1px;text-transform:uppercase">Highlight</div>
+      </div>
+      <div class="video-label">
+        <p class="video-title" data-editable contenteditable="false">Graduation Ceremony 2025</p>
+        <p class="video-sub" data-editable contenteditable="false">The unforgettable farewell event</p>
+      </div>
+    </div>
+
+    <div class="video-card" data-type="video" data-id="video-2">
+      <button class="del-btn" onclick="confirmDelete(this)" title="Delete">✕</button>>
+      <div class="video-thumb" style="background:linear-gradient(135deg,#1a3a6e,#0f3460)">
+        <div class="play-btn">▶</div>
+      </div>
+      <div class="video-label">
+        <p class="video-title" data-editable contenteditable="false">Annual Sports Day</p>
+        <p class="video-sub" data-editable contenteditable="false">Champions on the field</p>
+      </div>
+    </div>
+
+    <div class="video-card" data-type="video" data-id="video-3">
+      <button class="del-btn" onclick="confirmDelete(this)" title="Delete">✕</button>>
+      <div class="video-thumb" style="background:linear-gradient(135deg,#2d1a5e,#1a1a2e)">
+        <div class="play-btn">▶</div>
+      </div>
+      <div class="video-label">
+        <p class="video-title" data-editable contenteditable="false">Science Exhibition</p>
+        <p class="video-sub" data-editable contenteditable="false">Innovators in action</p>
+      </div>
+    </div>
+
+    <div class="video-card" data-type="video" data-id="video-4">
+      <button class="del-btn" onclick="confirmDelete(this)" title="Delete">✕</button>>
+      <div class="video-thumb" style="background:linear-gradient(135deg,#1a3d2e,#0f3460)">
+        <div class="play-btn">▶</div>
+      </div>
+      <div class="video-label">
+        <p class="video-title" data-editable contenteditable="false">Cultural Night</p>
+        <p class="video-sub" data-editable contenteditable="false">Dance, music & performances</p>
+      </div>
+    </div>
+
+    <div class="video-card add-media">
+      <div class="video-thumb" style="background:transparent;border:none">
+        <div style="text-align:center;color:#ccc">
+          <p style="font-size:2.5rem;margin-bottom:8px">🎬</p>
+          <p style="font-size:.8rem;letter-spacing:1px;text-transform:uppercase">Add a Video</p>
+        </div>
+      </div>
+      <div class="video-label">
+        <p class="video-title" style="color:#bbb">Upload Your Memory</p>
+        <p class="video-sub" data-editable contenteditable="false">Click to add a video</p>
+      </div>
+    </div>
+
+    <div class="video-card add-media">
+      <div class="video-thumb" style="background:transparent;border:none">
+        <div style="text-align:center;color:#ccc">
+          <p style="font-size:2.5rem;margin-bottom:8px">📸</p>
+          <p style="font-size:.8rem;letter-spacing:1px;text-transform:uppercase">Add a Photo</p>
+        </div>
+      </div>
+      <div class="video-label">
+        <p class="video-title" style="color:#bbb">Photo Memory</p>
+        <p class="video-sub" data-editable contenteditable="false">Click to add a photo</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p class="footer-logo"><img src="data:image/png;base64,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" style="width:50px;height:50px;object-fit:contain;vertical-align:middle;margin-right:8px;"> British International School System</p>
+  <p>Est. 2020 · Burewala, Pakistan</p>
+  <ul class="footer-links">
+    <li><a href="#top">Home</a></li>
+    <li><a href="#students">Students</a></li>
+    <li><a href="#teachers">Teachers</a></li>
+    <li><a href="#videos">Memories</a></li>
+  </ul>
+  <p style="margin-top:10px">Made with ❤️ for <span>Class of 2025</span> · All Rights Reserved · <span>British International School System</span></p>
+</footer>
+
+<!-- ══════════════ ADMIN BUTTON ══════════════ -->
+<button id="adminBtn" onclick="openAdminLogin()">🔐 Admin</button>
+
+<!-- ══════════════ PASSWORD MODAL ══════════════ -->
+<div id="pwModal">
+  <div class="pw-box">
+    <h3>🔐 Admin Access</h3>
+    <p>Enter your admin password to enable edit mode</p>
+    <input type="password" id="pwInput" placeholder="••••••••" onkeydown="if(event.key==='Enter')checkPassword()">
+    <div id="pwError"></div>
+    <div class="pw-btns">
+      <button class="pw-btn cancel" onclick="closeAdminLogin()">Cancel</button>
+      <button class="pw-btn confirm" onclick="checkPassword()">Unlock</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ EDIT MODE BAR ══════════════ -->
+<div id="editBar">
+  <div class="edit-label">✏️ Edit Mode <span>ADMIN</span></div>
+  <div class="edit-bar-btns">
+    <button class="eb-btn save" onclick="saveAllToSupabase()">💾 Save All to Supabase</button>
+    <button class="eb-btn exit" onclick="exitEditMode()">✕ Exit Edit Mode</button>
+  </div>
+</div>
+
+<!-- ══════════════ DELETE CONFIRM MODAL ══════════════ -->
+<div id="delModal">
+  <div class="del-box">
+    <h3>⚠️ Delete Permanently?</h3>
+    <p>You are about to delete:</p>
+    <p class="del-name" id="delTargetName">—</p>
+    <small>This will permanently remove the entry from Supabase and cannot be undone.</small>
+    <div id="delStatus"></div>
+    <div class="del-btns">
+      <button class="del-confirm-btn no" onclick="closeDelModal()">Cancel</button>
+      <button class="del-confirm-btn yes" onclick="executeDelete()">🗑️ Delete from Supabase</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════════════════════════════
+// ⚙️  SUPABASE CONFIG — Fill these in after creating your project
+// ═══════════════════════════════════════════════════════════════════════════
+const SUPABASE_URL  = 'https://qvmxatwexlgoqfavuhdy.supabase.co';  // ← STEP 6
+const SUPABASE_KEY  = 'sb_publishable_tGMIIW5OOI8lydhtm8ckGQ_4EeDYfgr';                 // ← STEP 6
+const ADMIN_PASSWORD = 'admin2025';                            // ← Change this!
+
+// Helper: call Supabase REST API
+async function sbFetch(path, method = 'GET', body = null) {
+  const opts = {
+    method,
+    headers: {
+      'apikey': SUPABASE_KEY,
+      'Authorization': 'Bearer ' + SUPABASE_KEY,
+      'Content-Type': 'application/json',
+      'Prefer': method === 'POST' ? 'resolution=merge-duplicates' : ''
+    }
+  };
+  if (body) opts.body = JSON.stringify(body);
+  const res = await fetch(SUPABASE_URL + '/rest/v1/' + path, opts);
+  if (!res.ok && res.status !== 204) throw new Error('Supabase error: ' + res.status);
+  try { return await res.json(); } catch { return null; }
+}
+
+// ── Load data from Supabase on page open ──────────────────────────────────
+async function loadFromSupabase() {
+  if (SUPABASE_URL.includes('YOUR_PROJECT_ID')) return; // not configured yet
+  try {
+    const [students, teachers] = await Promise.all([
+      sbFetch('students?order=id'),
+      sbFetch('teachers?order=id')
+    ]);
+
+    // Patch student cards
+    if (students && students.length) {
+      const cards = document.querySelectorAll('.student-card[data-id]');
+      students.forEach((s, i) => {
+        const card = cards[i];
+        if (!card) return;
+        card.dataset.id = s.id || card.dataset.id;
+        const setText = (sel, val) => { const el = card.querySelector(sel); if (el && val) el.textContent = val; };
+        setText('.student-name', s.name);
+        setText('.student-roll', s.roll);
+        const rows = card.querySelectorAll('.info-row');
+        const keys = ['age','fathers_name','address','phone','weight'];
+        rows.forEach((row, ri) => {
+          const val = row.querySelector('.info-val');
+          if (val && s[keys[ri]]) val.textContent = s[keys[ri]];
+        });
+        if (s.avatar_url) {
+          const av = card.querySelector('.student-avatar');
+          if (av) {
+            const img = av.querySelector('img') || document.createElement('img');
+            img.src = s.avatar_url;
+            if (!av.contains(img)) av.insertBefore(img, av.firstChild);
+            const emoji = av.querySelector('.av-emoji');
+            if (emoji) emoji.style.display = 'none';
+          }
+        }
+      });
+    }
+
+    // Patch teacher cards
+    if (teachers && teachers.length) {
+      const cards = document.querySelectorAll('.teacher-card[data-id]');
+      teachers.forEach((t, i) => {
+        const card = cards[i];
+        if (!card) return;
+        card.dataset.id = t.id || card.dataset.id;
+        const setText = (sel, val) => { const el = card.querySelector(sel); if (el && val) el.textContent = val; };
+        setText('.teacher-name', t.name);
+        setText('.teacher-subject', t.subject);
+        setText('.teacher-quote', t.quote);
+        const infoVals = card.querySelectorAll('.t-info-val');
+        const keys = ['age','address','phone','qualification'];
+        infoVals.forEach((el, ri) => { if (t[keys[ri]]) el.textContent = t[keys[ri]]; });
+      });
+    }
+
+    console.log('✅ Loaded data from Supabase');
+  } catch (err) {
+    console.warn('Could not load from Supabase:', err.message);
+  }
+}
+
+// Upload image to Supabase Storage and return public URL
+async function uploadToStorage(bucket, path, file) {
+  const res = await fetch(`${SUPABASE_URL}/storage/v1/object/${bucket}/${path}`, {
+    method: 'POST',
+    headers: {
+      'apikey': SUPABASE_KEY,
+      'Authorization': 'Bearer ' + SUPABASE_KEY,
+      'Content-Type': file.type,
+      'x-upsert': 'true'
+    },
+    body: file
+  });
+  if (!res.ok) throw new Error('Upload failed: ' + res.status);
+  return `${SUPABASE_URL}/storage/v1/object/public/${bucket}/${path}`;
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// CONFETTI ANIMATION
+// ═══════════════════════════════════════════════════════════════════════════
+const canvas = document.getElementById('confettiCanvas');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+const pieces = [];
+const colors = ['#c9a84c','#fff','#e8c76d','#aad4f5','#f5aaa0'];
+for(let i=0;i<80;i++){
+  pieces.push({
+    x:Math.random()*canvas.width,
+    y:Math.random()*canvas.height - canvas.height,
+    w:Math.random()*10+4,
+    h:Math.random()*6+3,
+    color:colors[Math.floor(Math.random()*colors.length)],
+    speed:Math.random()*1.5+0.5,
+    angle:Math.random()*Math.PI*2,
+    spin:Math.random()*0.05-0.025,
+    opacity:Math.random()*0.6+0.2
+  });
+}
+function drawConfetti(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  pieces.forEach(p=>{
+    ctx.save();
+    ctx.globalAlpha=p.opacity;
+    ctx.fillStyle=p.color;
+    ctx.translate(p.x,p.y);
+    ctx.rotate(p.angle);
+    ctx.fillRect(-p.w/2,-p.h/2,p.w,p.h);
+    ctx.restore();
+    p.y+=p.speed;
+    p.angle+=p.spin;
+    if(p.y>canvas.height) p.y=-10;
+  });
+  requestAnimationFrame(drawConfetti);
+}
+drawConfetti();
+window.addEventListener('resize',()=>{canvas.width=window.innerWidth;canvas.height=window.innerHeight});
+
+// ═══════════════════════════════════════════════════════════════════════════
+// MULTI-PHOTO GALLERY FOR SCHOOL LOCATIONS
+// ═══════════════════════════════════════════════════════════════════════════
+const MAX_PHOTOS = 30;
+const galleryData = { 0:[], 1:[], 2:[], 3:[], 4:[] };
+const galleryLabels = ['School Building','Library','Sports Ground','Auditorium','Science Lab'];
+let activeGallery = 0;
+let activeSlide = 0;
+
+function addPhotos(input, idx) {
+  const files = Array.from(input.files);
+  const remaining = MAX_PHOTOS - galleryData[idx].length;
+  const toAdd = files.slice(0, remaining);
+
+  toAdd.forEach(file => {
+    const reader = new FileReader();
+    reader.onload = e => {
+      galleryData[idx].push(e.target.result);
+      updateCardPreview(idx);
+    };
+    reader.readAsDataURL(file);
+  });
+
+  if (files.length > remaining) {
+    alert(`Maximum ${MAX_PHOTOS} photos allowed. Only ${remaining} were added.`);
+  }
+  input.value = '';
+}
+
+function updateCardPreview(idx) {
+  const photos = galleryData[idx];
+  const preview = document.getElementById('preview-' + idx);
+  const countEl = document.getElementById('count-' + idx);
+  countEl.textContent = photos.length + ' photo' + (photos.length !== 1 ? 's' : '');
+
+  const emoji = preview.querySelector('.spc-emoji');
+  if (emoji) emoji.style.display = 'none';
+
+  let cover = preview.querySelector('.spc-cover');
+  if (!cover) {
+    cover = document.createElement('img');
+    cover.className = 'spc-cover';
+    preview.appendChild(cover);
+  }
+  cover.src = photos[photos.length - 1];
+
+  let stack = preview.querySelector('.spc-stack');
+  if (!stack) {
+    stack = document.createElement('div');
+    stack.className = 'spc-stack';
+    preview.appendChild(stack);
+  }
+  stack.innerHTML = '';
+  photos.slice(-3).forEach(src => {
+    const t = document.createElement('img');
+    t.className = 'spc-stack-thumb';
+    t.src = src;
+    stack.appendChild(t);
+  });
+}
+
+function openGallery(idx) {
+  if (galleryData[idx].length === 0) {
+    document.querySelectorAll('.school-pic-card')[idx].querySelector('input').click();
+    return;
+  }
+  activeGallery = idx;
+  activeSlide = 0;
+  document.getElementById('galleryTitle').textContent = galleryLabels[idx];
+  document.getElementById('galleryModal').style.display = 'flex';
+  renderSlide();
+}
+
+function closeGallery() {
+  document.getElementById('galleryModal').style.display = 'none';
+}
+
+function renderSlide() {
+  const photos = galleryData[activeGallery];
+  const main = document.getElementById('galleryMain');
+  const counter = document.getElementById('slideCounter');
+  const strip = document.getElementById('thumbStrip');
+
+  main.src = photos[activeSlide];
+  counter.textContent = (activeSlide + 1) + ' / ' + photos.length;
+
+  strip.innerHTML = '';
+  photos.forEach((src, i) => {
+    const img = document.createElement('img');
+    img.src = src;
+    img.className = 'thumb-img' + (i === activeSlide ? ' active' : '');
+    img.onclick = () => { activeSlide = i; renderSlide(); };
+    strip.appendChild(img);
+  });
+
+  const activeThumb = strip.querySelectorAll('.thumb-img')[activeSlide];
+  if (activeThumb) activeThumb.scrollIntoView({ inline:'center', behavior:'smooth' });
+}
+
+function shiftSlide(dir) {
+  const photos = galleryData[activeGallery];
+  activeSlide = (activeSlide + dir + photos.length) % photos.length;
+  renderSlide();
+}
+
+function triggerModalAdd() {
+  const idx = activeGallery;
+  document.querySelectorAll('.school-pic-card')[idx].querySelector('input').click();
+  setTimeout(() => { if (galleryData[idx].length > 0) renderSlide(); }, 500);
+}
+
+document.addEventListener('keydown', e => {
+  if (document.getElementById('galleryModal').style.display === 'flex') {
+    if (e.key === 'ArrowRight') shiftSlide(1);
+    if (e.key === 'ArrowLeft') shiftSlide(-1);
+    if (e.key === 'Escape') closeGallery();
+  }
+});
+
+document.getElementById('galleryModal').addEventListener('click', function(e) {
+  if (e.target === this) closeGallery();
+});
+
+// ═══════════════════════════════════════════════════════════════════════════
+// TEACHER PHOTO UPLOAD
+// ═══════════════════════════════════════════════════════════════════════════
+function triggerTeacherPic(cell) {
+  const input = cell.querySelector('input[type=file]');
+  if (input) input.click();
+}
+
+function handleTeacherPic(input) {
+  const cell = input.closest('.teacher-pic');
+  const file = input.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    const old = cell.querySelector('img');
+    if (old) old.remove();
+    const img = document.createElement('img');
+    img.src = e.target.result;
+    cell.insertBefore(img, cell.firstChild);
+    cell.childNodes.forEach(n => { if (n.nodeType === 3) n.textContent = ''; });
+  };
+  reader.readAsDataURL(file);
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// STUDENT AVATAR PHOTO UPLOAD
+// ═══════════════════════════════════════════════════════════════════════════
+function triggerAvatarUpload(avatar) {
+  const input = avatar.querySelector('input[type=file]');
+  if (input) input.click();
+}
+
+function handleAvatarUpload(input) {
+  const avatar = input.closest('.student-avatar');
+  const file = input.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    const old = avatar.querySelector('img');
+    if (old) old.remove();
+    const img = document.createElement('img');
+    img.src = e.target.result;
+    avatar.insertBefore(img, avatar.firstChild);
+    const emoji = avatar.querySelector('.av-emoji');
+    if (emoji) emoji.style.display = 'none';
+  };
+  reader.readAsDataURL(file);
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// 🔐 ADMIN LOGIN SYSTEM
+// ═══════════════════════════════════════════════════════════════════════════
+let isEditMode = false;
+let pendingDeleteEl = null;
+
+function openAdminLogin() {
+  if (isEditMode) { exitEditMode(); return; }
+  document.getElementById('pwModal').classList.add('show');
+  setTimeout(() => document.getElementById('pwInput').focus(), 100);
+  document.getElementById('pwError').textContent = '';
+  document.getElementById('pwInput').value = '';
+}
+
+function closeAdminLogin() {
+  document.getElementById('pwModal').classList.remove('show');
+  document.getElementById('pwInput').value = '';
+  document.getElementById('pwError').textContent = '';
+}
+
+function checkPassword() {
+  const val = document.getElementById('pwInput').value;
+  if (val === ADMIN_PASSWORD) {
+    closeAdminLogin();
+    enterEditMode();
+  } else {
+    const errEl = document.getElementById('pwError');
+    errEl.textContent = '❌ Incorrect password. Try again.';
+    document.getElementById('pwInput').value = '';
+    document.getElementById('pwInput').focus();
+    document.getElementById('pwInput').style.borderColor = '#ff6b6b';
+    setTimeout(() => { document.getElementById('pwInput').style.borderColor = ''; }, 1500);
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// ✏️  EDIT MODE
+// ═══════════════════════════════════════════════════════════════════════════
+function enterEditMode() {
+  isEditMode = true;
+  document.body.classList.add('edit-mode');
+  document.getElementById('editBar').classList.add('show');
+  document.getElementById('adminBtn').classList.add('active');
+  document.getElementById('adminBtn').textContent = '🔓 Exit Edit';
+  document.body.style.paddingTop = '56px';
+
+  // Enable contenteditable on all editable fields
+  document.querySelectorAll('[data-editable]').forEach(el => {
+    el.contentEditable = 'true';
+    el.dataset.original = el.innerHTML;
+  });
+
+  showToast('✏️ Edit mode active — click any text to edit', '#c0392b');
+}
+
+function exitEditMode() {
+  isEditMode = false;
+  document.body.classList.remove('edit-mode');
+  document.getElementById('editBar').classList.remove('show');
+  document.getElementById('adminBtn').classList.remove('active');
+  document.getElementById('adminBtn').textContent = '🔐 Admin';
+  document.body.style.paddingTop = '';
+
+  // Disable contenteditable
+  document.querySelectorAll('[data-editable]').forEach(el => {
+    el.contentEditable = 'false';
+  });
+
+  showToast('Edit mode exited', '#1a3a6e');
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// 💾 SAVE TO SUPABASE
+// ═══════════════════════════════════════════════════════════════════════════
+async function saveAllToSupabase() {
+  if (!SUPABASE_URL.includes('supabase.co') || SUPABASE_URL.includes('YOUR_PROJECT')) {
+    showToast('⚠️ Please set your Supabase URL & Key in the config section first!', '#8b6914');
+    return;
+  }
+
+  const btn = document.querySelector('.eb-btn.save');
+  btn.textContent = '⏳ Saving...';
+  btn.disabled = true;
+
+  try {
+    // Collect student data
+    const studentCards = document.querySelectorAll('.student-card[data-id]');
+    const students = [];
+    studentCards.forEach(card => {
+      const rows = card.querySelectorAll('.info-row');
+      const data = { id: card.dataset.id };
+      const name = card.querySelector('.student-name');
+      const roll = card.querySelector('.student-roll');
+      if (name) data.name = name.textContent.trim();
+      if (roll) data.roll = roll.textContent.trim();
+      rows.forEach(row => {
+        const lbl = row.querySelector('.info-label');
+        const val = row.querySelector('.info-val');
+        if (lbl && val) data[lbl.textContent.trim().toLowerCase().replace(/\s+/g,'_')] = val.textContent.trim();
+      });
+      students.push(data);
+    });
+
+    // Collect teacher data
+    const teacherCards = document.querySelectorAll('.teacher-card[data-id]');
+    const teachers = [];
+    teacherCards.forEach(card => {
+      const data = { id: card.dataset.id };
+      const name = card.querySelector('.teacher-name');
+      const subj = card.querySelector('.teacher-subject');
+      const quote = card.querySelector('.teacher-quote');
+      if (name) data.name = name.textContent.trim();
+      if (subj) data.subject = subj.textContent.trim();
+      if (quote) data.quote = quote.textContent.trim();
+      const infoVals = card.querySelectorAll('.t-info');
+      infoVals.forEach(info => {
+        const lbl = info.querySelector('.t-info-lbl');
+        const val = info.querySelector('.t-info-val');
+        if (lbl && val) data[lbl.textContent.trim().toLowerCase()] = val.textContent.trim();
+      });
+      teachers.push(data);
+    });
+
+    // Save students
+    const sRes = await fetch(`${SUPABASE_URL}/rest/v1/students`, {
+      method: 'POST',
+      headers: {
+        'apikey': SUPABASE_KEY,
+        'Authorization': `Bearer ${SUPABASE_KEY}`,
+        'Content-Type': 'application/json',
+        'Prefer': 'resolution=merge-duplicates'
+      },
+      body: JSON.stringify(students)
+    });
+
+    // Save teachers
+    const tRes = await fetch(`${SUPABASE_URL}/rest/v1/teachers`, {
+      method: 'POST',
+      headers: {
+        'apikey': SUPABASE_KEY,
+        'Authorization': `Bearer ${SUPABASE_KEY}`,
+        'Content-Type': 'application/json',
+        'Prefer': 'resolution=merge-duplicates'
+      },
+      body: JSON.stringify(teachers)
+    });
+
+    if (sRes.ok && tRes.ok) {
+      showToast('✅ All changes saved to Supabase!', '#1a6b3a');
+    } else {
+      throw new Error(`Students: ${sRes.status}, Teachers: ${tRes.status}`);
+    }
+
+  } catch (err) {
+    console.error('Supabase save error:', err);
+    showToast('❌ Save failed: ' + err.message, '#8b0000');
+  } finally {
+    btn.textContent = '💾 Save All to Supabase';
+    btn.disabled = false;
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// 🗑️  DELETE FROM SUPABASE
+// ═══════════════════════════════════════════════════════════════════════════
+function confirmDelete(btn) {
+  const card = btn.closest('[data-type]');
+  if (!card) return;
+  pendingDeleteEl = card;
+
+  const type = card.dataset.type;
+  let label = '';
+  if (type === 'student') {
+    const n = card.querySelector('.student-name');
+    label = n ? n.textContent.trim() : card.dataset.id;
+  } else if (type === 'teacher') {
+    const n = card.querySelector('.teacher-name');
+    label = n ? n.textContent.trim() : card.dataset.id;
+  } else if (type === 'video') {
+    const n = card.querySelector('.video-title');
+    label = n ? n.textContent.trim() : card.dataset.id;
+  }
+
+  document.getElementById('delTargetName').textContent = label + ' (' + type + ')';
+  document.getElementById('delStatus').textContent = '';
+  document.getElementById('delModal').classList.add('show');
+}
+
+function closeDelModal() {
+  document.getElementById('delModal').classList.remove('show');
+  pendingDeleteEl = null;
+}
+
+async function executeDelete() {
+  if (!pendingDeleteEl) return;
+  const card = pendingDeleteEl;
+  const type = card.dataset.type;
+  const id = card.dataset.id;
+  const statusEl = document.getElementById('delStatus');
+  const yesBtn = document.querySelector('.del-confirm-btn.yes');
+
+  yesBtn.textContent = '⏳ Deleting...';
+  yesBtn.disabled = true;
+  statusEl.textContent = '';
+
+  // Determine table name
+  const tableMap = { student: 'students', teacher: 'teachers', video: 'videos' };
+  const table = tableMap[type] || type + 's';
+
+  try {
+    if (SUPABASE_URL.includes('YOUR_PROJECT')) {
+      // No Supabase configured — just remove from DOM
+      statusEl.style.color = '#ffd700';
+      statusEl.textContent = '⚠️ Supabase not configured — removed from page only';
+      await new Promise(r => setTimeout(r, 800));
+    } else {
+      const res = await fetch(`${SUPABASE_URL}/rest/v1/${table}?id=eq.${encodeURIComponent(id)}`, {
+        method: 'DELETE',
+        headers: {
+          'apikey': SUPABASE_KEY,
+          'Authorization': `Bearer ${SUPABASE_KEY}`,
+          'Content-Type': 'application/json'
+        }
+      });
+
+      if (!res.ok && res.status !== 204) {
+        throw new Error(`HTTP ${res.status}`);
+      }
+    }
+
+    // Remove card from DOM with animation
+    card.style.transition = 'all 0.4s ease';
+    card.style.opacity = '0';
+    card.style.transform = 'scale(0.8)';
+    setTimeout(() => {
+      card.remove();
+      showToast('🗑️ Deleted successfully', '#1a6b3a');
+    }, 400);
+
+    closeDelModal();
+
+  } catch (err) {
+    statusEl.style.color = '#ff6b6b';
+    statusEl.textContent = '❌ Delete failed: ' + err.message;
+    console.error('Delete error:', err);
+  } finally {
+    yesBtn.textContent = '🗑️ Delete from Supabase';
+    yesBtn.disabled = false;
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// 🍞 TOAST NOTIFICATION
+// ═══════════════════════════════════════════════════════════════════════════
+function showToast(msg, color = '#1a3a6e') {
+  const existing = document.getElementById('adminToast');
+  if (existing) existing.remove();
+  const t = document.createElement('div');
+  t.id = 'adminToast';
+  t.textContent = msg;
+  Object.assign(t.style, {
+    position:'fixed', bottom:'90px', right:'28px', zIndex:'99999',
+    background: color, color:'#fff', padding:'12px 20px', borderRadius:'50px',
+    fontWeight:'600', fontSize:'.82rem', letterSpacing:'1px',
+    boxShadow:'0 4px 20px rgba(0,0,0,.4)', transition:'all .4s ease',
+    opacity:'0', transform:'translateY(10px)'
+  });
+  document.body.appendChild(t);
+  setTimeout(() => { t.style.opacity = '1'; t.style.transform = 'translateY(0)'; }, 10);
+  setTimeout(() => {
+    t.style.opacity = '0';
+    setTimeout(() => t.remove(), 400);
+  }, 3000);
+}
+
+// Load Supabase data when page opens
+document.addEventListener('DOMContentLoaded', loadFromSupabase);
+
+// Close modals on backdrop click
+document.getElementById('pwModal').addEventListener('click', function(e) {
+  if (e.target === this) closeAdminLogin();
+});
+document.getElementById('delModal').addEventListener('click', function(e) {
+  if (e.target === this) closeDelModal();
+});
+// Keyboard shortcut: Escape closes modals
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    if (document.getElementById('pwModal').classList.contains('show')) closeAdminLogin();
+    if (document.getElementById('delModal').classList.contains('show')) closeDelModal();
+  }
+});
+</script>
+</body>
+</html>
